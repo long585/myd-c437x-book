@@ -17,7 +17,7 @@ board  Config.in         COPYING     docs  Makefile         package  system
 boot   Config.in.legacy  DEVELOPERS  fs    Makefile.legacy  README   toolchain
 
 ```
-关于`Buildroot`的目录结构可以参照[https://buildroot.org/downloads/manual/manual.html](https://buildroot.org/downloads/manual/manual.html). 其中和`MYD-C437x-PRU`开发板相关的部分主要位于`<WORKDIR>/Filesystem/myir-buildroot/board/myir/myd_c437x_idk`目录。   
+关于`Buildroot`的目录结构可以参照[https://buildroot.org/downloads/manual/manual.html](https://buildroot.org/downloads/manual/manual.html). 其中和`MYD-C437x-EVM`开发板相关的部分主要位于`<WORKDIR>/Filesystem/myir-buildroot/board/myir/myd_c437x_evm`目录。   
 
 ###3.3.2 开始构建  
 
