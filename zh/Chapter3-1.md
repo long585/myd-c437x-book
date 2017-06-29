@@ -16,7 +16,7 @@ $ cd myir-u-boot
 | --- | --- | --- |
 | MYD-C437X-EVM | myd\_c437x\_evm\_defconfig | MLO和u-boot.img |
 
-下面以MYD-C437X-PRU开发板为例，说明u-boot的编译过程：
+下面以MYD-C437X-EVM开发板为例，说明u-boot的编译过程：
 
 ```
 $ make distclean
