@@ -13,7 +13,6 @@ MYD AM437X系列开发板出厂附带嵌入式Linux系统开发所需要的交�
 | 驱动 | USB Host | USB Host驱动，支持OHCI和EHCI两种传输模式 | YES |
 | 驱动 | USB Device | USB Device驱动（Gadget） | YES |
 | 驱动 | Ethernet | 以太网驱动 | YES |
-| 驱动 | PRU Ethernet | 工业以太网驱动 | YES |
 | 驱动 | MMC/SD | MMC/SD卡驱动 | YES |
 | 驱动 | EMMC | EMMC驱动 | YES |
 | 驱动 | I2C | I2C驱动 | YES |
@@ -44,6 +43,7 @@ MYD AM437X系列开发板出厂附带嵌入式Linux系统开发所需要的交�
 | 应用程序 | RS485 | RS485测试程序 | YES |
 | 应用程序 | PRU | PRU LED测试程序 | YES |
 | 应用程序 | Qt | Qt环境以及演示程序 | YES |
+| 应用程序 | Camera | 双摄像头测试程序 | YES |
 | 工具 | Cross Compiler | Linaro GCC 5.3 | BIN |
 | 工具 | Win32DiskImager | TF/SD镜像烧写工具 | EXE |
 | 工具 | Format Tools | TF/SD格式化工具 | EXE |
