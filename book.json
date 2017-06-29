@@ -1,0 +1,34 @@
+{
+    "gitbook" : "2.x.x",
+    "links" : {
+        "sidebar" : {
+            "MYiR Technology Ltd." : "http://www.myir-tech.com"
+        }
+    },
+ 
+    "plugins" : ["disqus"],
+    "pluginsConfig" : {
+        "disqus" : {
+            "shortName" : ""
+        }
+    },
+    
+    "plugins" : ["atoc"],
+    "pluginsConfig" : {
+        "atoc": {
+        	"addClass": true,
+        	"className": "atoc"
+        }
+    },
+
+    "pdf" : {
+        "fontSize" : 14,
+        "paperSize" : "a4"
+    },
+    
+	 "tbfed-pagefooter": {
+  		"copyright":"Copyright@MYIR Tech Limited 2011-2017 all rights reserved.",
+  		"modify_label": "该文件修订时间：",
+  		"modify_format": "YYYY-MM-DD HH:mm:ss"
+}
+}
