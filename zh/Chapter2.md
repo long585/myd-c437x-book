@@ -15,7 +15,7 @@
 将TTL电平调试串口J16（图中Debug UART）通过USB转TTL电平调试线连到PC上，并设置PC端串口的波特率设为115200，数据位为8，停止位为1，无奇偶校验。如需要网络调试，请用网线连接开发板J6(图中Giga Ethernet)。
 具体如下图：  
 ![PNG](imagech/C2_1_1_C437X_PRU_Interface.png)  
-图2-1 MYD-C437X-PRU接口定义
+图2-1 MYD-C437X接口定义
 
 
 **建立工作目录:**
