@@ -20,7 +20,7 @@ $ cd myir-kernel
 
 ```
 $ make mrproper
-$ make myd_c437x_idk_defconfig
+$ make myd_c437x_evm_defconfig
 $ make zImage
 $ make dtbs
 ```
