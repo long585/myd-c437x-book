@@ -20,7 +20,7 @@ $ cd myir-u-boot
 
 ```
 $ make distclean
-$ make myd_c437x_defconfig
+$ make myd_c437x_evm_defconfig
 $ make
 ```
 
