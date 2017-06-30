@@ -71,5 +71,7 @@ Options:
 # echo 1000 > /sys/class/net/can0/tx_queue_len
 ```
 
+* 用同样的方法测试两块板子的can1接口，结果一样，不再赘述。
+
 MYIR AM437X系列其它板型CAN BUS测试情况类似。
 
