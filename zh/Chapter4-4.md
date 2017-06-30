@@ -16,7 +16,7 @@
 
 **测试过程:**
 
-* 将目录`<WORKDIR>/Examples/rtc`中的可执行程序rtc\_test拷贝至开发板/usr/bin/，执行以下命令将rtc当前时间设置为2016/11/18  17:58:18 并读取当前时间：  
+* 将目录`<WORKDIR>/Examples/rootfs/usr/bin/`中的可执行程序rtc\_test拷贝至开发板/usr/bin/，执行以下命令将rtc当前时间设置为2016/11/18  17:58:18 并读取当前时间：  
 
 ```
 # chmod 777 /usr/bin/rtc_test
