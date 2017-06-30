@@ -16,7 +16,7 @@
 
 **测试过程：**
 
-* 编译并拷贝`<WORKDIR>/Examples/framebuffer`目录下的测试程序framebuffer\_test至开发板/usr/bin目录。在Linux终端输入如下命令：  
+* 编译并拷贝`<WORKDIR>/Examples/rootfs/usr/bin/`目录下的测试程序framebuffer\_test至开发板/usr/bin目录。在Linux终端输入如下命令：  
 
 ```
 # chmod 777 /usr/bin/framebuffer_test
