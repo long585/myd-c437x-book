@@ -39,7 +39,7 @@ output/images 目录下的输出文件基本上包含了bootloader, kernel, 以�
 
 ###3.3.3 配置说明  
 
-在make之前，可以通过`make menuconfig`进入配置界面。然后可以跟内核配置一样，对当前的配置进行一些修改。下面以`MYD-C437X-PRU`平台为例，加以说明。
+在make之前，可以通过`make menuconfig`进入配置界面。然后可以跟内核配置一样，对当前的配置进行一些修改。下面以`MYD-C437X-EVM`平台为例，加以说明。
 
 * 配置交叉编译工具链:    
 
