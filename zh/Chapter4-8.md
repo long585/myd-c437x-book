@@ -60,7 +60,7 @@ Event: Code = 0, Type = 0, Value=0
 * 测试S1  
 
 ```
-# kepad_test  -d /dev/input/event1
+# kepad_test  -d /dev/input/event12
 Event: Code = 116, Type = 1, Value=1                -- 按下S1
 Event: Code = 0, Type = 0, Value=0
 Event: Code = 116, Type = 1, Value=0                -- 释放S1
