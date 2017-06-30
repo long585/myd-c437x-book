@@ -17,7 +17,7 @@
 
 **测试过程：**
 
-* 将目录`<WORKDIR>/Examples/can`中的可执行程序can\_test拷贝至开发板/usr/bin/, 分别将两块开发板上的can0通信波特率都设置位50Kbps，并使能can0设备, 如下所示:  
+* 将目录`<WORKDIR>/Examples/rootfs/usr/bin/`中的可执行程序can\_test拷贝至开发板/usr/bin/, 分别将两块开发板上的can0通信波特率都设置位50Kbps，并使能can0设备, 如下所示:  
 
 ```
 # can_test --help
