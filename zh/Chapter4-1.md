@@ -14,7 +14,7 @@
 
 **测试过程：**
 
-* 将目录`<WORKDIR>/Examples/gpio`中的可执行程序gpio\_test拷贝至开发板/usr/bin/目录下, 执行该程序进行测试如下：
+* 将目录`<WORKDIR>/Examples/rootfs/usr/bin/`中的可执行程序gpio\_test拷贝至开发板/usr/bin/目录下, 执行该程序进行测试如下：
 
 ```\`
 # gpio_test -h
