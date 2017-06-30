@@ -5,7 +5,7 @@
 **测试硬件环境：**
 
 * MYD-C437X-EVM开发板两块  
-* 数据线连接两块板的J10，485A&lt;-&gt;485A，485B&lt;-&gt;485B，GND&lt;-&gt;GND  
+* 数据线连接两块板的J15，485A&lt;-&gt;485A，485B&lt;-&gt;485B，GND&lt;-&gt;GND  
 * USB转TTL调试串口线两根，分别连接两块板的J25和PC的USB host接口, PC端波特率设置115200-8-n-1
 
 **测试软件环境：**
@@ -51,7 +51,7 @@ RECV:5, total:1
 RECV:6, total:1 
 RECV:7, total:1 
 RECV:8, total:1 
-RECV:9, total:1 
+RECV:9, total:1
 ```
 
 * 两块板互换一下角色，结果一样，不再赘述。           
