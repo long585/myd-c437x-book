@@ -39,27 +39,23 @@ Options:
 # tty_test -d /dev/ttyO3 -b 9600 -m 0  -w 0123456789 -f -l  
 
  SEND:0123456789
- 
+
  SEND:0123456789
- 
+
  SEND:0123456789
 ```
 
 * 再在另一开发板执行以下命令接收数据：  
 
-\#`tty_test -d /dev/ttyO3 -b 9600 -m 0 -f -l`
-
-`RECV:0123456789, total:10 `
-
-`RECV:0123456789, total:10 `
+`#tty_test -d /dev/ttyO3 -b 9600 -m 0 -f -l`
 
 `RECV:0123456789, total:10`
 
-* 两个串口终端端互换角色，J16作为接收，J17作为数据发送。
+`RECV:0123456789, total:10`
 
-  先在J16的串口终端执行以下命令接收数据：
+`RECV:0123456789, total:10`
 
-\#`tty_test -d /dev/ttyO3 -b 9600 -m 0 -f -l`
+* 两块板互换一下角色，结果一样，也可以通过短接某一块开发板的RTS和CTS，TXD和RXD, 进行硬件回环测试，具体情况不再赘述。
 
 MYIR AM437X系列其它板型RS232测试情况类似。
 
