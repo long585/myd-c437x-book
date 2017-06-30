@@ -29,8 +29,8 @@ $ make
 编译过程中会生成一个output目录，最终生成的输出的文件位于`<WORKDIR>/Filesystem/myir-buildroot/output/images`目录。
 ```
 $ls -al output/images
-boot.vfat               ramdisk.gz      rootfs.cpio.uboot  rootfs.tar.gz  u-boot.img     uEnv_ramdisk.txt
-MLO                     readme.txt      rootfs.ext2        rootfs.ubi     uEnv           uEnv.txt
+boot.vfat               ramdisk.gz      rootfs.cpio.uboot  rootfs.tar.gz  u-boot.img   uEnv_ramdisk.txt
+MLO                     readme.txt      rootfs.ext2        rootfs.ubi     uEnv   uEnv.txt
 myd_c437x_evm.dtb       rootfs.cpio     rootfs.ext4        rootfs.ubifs   uEnv_hdmi.txt  zImage
 myd_c437x_evm_hdmi.dtb  rootfs.cpio.gz  rootfs.tar         sdcard.img     uEnv_mmc.txt
 
