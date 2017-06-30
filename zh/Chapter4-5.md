@@ -4,11 +4,11 @@
 
 **测试硬件环境：**
 
-* MYD-C437X-EVM 开发板
+* MYD-C437X-EVM 开发板两块
 
-* USB转TTL调试串口线两根，一根连接开发板的J16和PC的USB host接口, PC端波特率设置115200-8-n-1；
+* 数据线连接两块开发的J17，GND&lt;-&gt;GND，TXD&lt;-&gt;RXD，RXD&lt;-&gt;TXD, CTS&lt;-&gt;RTS， RTS&lt;-&gt;CTS
 
-  另一根连开发板J17和PC的USBhost接口，PC端波特率设置115200-8-n-1，此串口为测试串口
+* USB转TTL调试串口线两根，分别连接两块开发板的J16和PC的USB host接口, PC端波特率设置115200-8-n-1；
 
 **测试软件环境：**
 
@@ -48,13 +48,9 @@ Options:
 
 * 两个串口终端端互换角色，J16作为接收，J17作为数据发送。
 
- 先在J16的串口终端执行以下命令接收数据：
+  先在J16的串口终端执行以下命令接收数据：
 
 \#`tty_test -d /dev/ttyO3 -b 9600 -m 0 -f -l`
-
-
-
-
 
 MYIR AM437X系列其它板型RS232测试情况类似。
 
