@@ -48,7 +48,7 @@ clean:
         $(RM) *.o $(TARGET)
 ```
 
-用户可以一次完成所有示例的编译，install 如下:
+用户可以一次完成所有示例的编译，如下:
 
 ```
 $ cd <WORKDIR>/Examples/
@@ -56,6 +56,8 @@ $ make OPTION=MYD-C437X-EVM clean
 $ make OPTION=MYD-C437X-EVM
 $ make OPTION=MYD-C437X-EVM install
 ```
+
+安装路径由Makefile里面的PREFIX变量指定默认为`<WORKDIR>/Examples/rootfs`
 
 也可以一个一个的单独编译，例如:
 
