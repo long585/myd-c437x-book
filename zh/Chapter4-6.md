@@ -36,17 +36,22 @@ Options:
 ```
 # tty_test -d /dev/ttyO5 -b 9600 -m 1  -w 0123456789 -l  
  SEND:0123456789
- SEND:0123456789
- SEND:0123456789
 ```
 
 * 再在另一开发板执行以下命令接收数据：  
 
 ```
-# tty_test -d /dev/ttyO5 -b 9600 -m 1  -l
- RECV:0123456789, total:10
- RECV:0123456789, total:10
- RECV:0123456789, total:10
+# # tty_test -d /dev/ttyO5 -b 9600 -m 1 -l
+RECV:0, total:1 
+RECV:1, total:1 
+RECV:2, total:1 
+RECV:3, total:1 
+RECV:4, total:1 
+RECV:5, total:1 
+RECV:6, total:1 
+RECV:7, total:1 
+RECV:8, total:1 
+RECV:9, total:1 
 ```
 
 * 两块板互换一下角色，结果一样，不再赘述。           
