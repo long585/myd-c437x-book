@@ -47,15 +47,13 @@ tps65218_pwrbutton
 
 ```
 # keypad_test  -d /dev/input/event0
-Event: Code = 115, Type = 1, Value=1                -- 按下S3
+Event: Code = 102, Type = 1, Value=1         --按下USER0
 Event: Code = 0, Type = 0, Value=0
-Event: Code = 115, Type = 1, Value=2
-Event: Code = 0, Type = 0, Value=1
-Event: Code = 115, Type = 1, Value=0                -- 释放S3            
+Event: Code = 102, Type = 1, Value=0         --释放USER0
 Event: Code = 0, Type = 0, Value=0
-Event: Code = 114, Type = 1, Value=1                -- 按下S4
+Event: Code = 158, Type = 1, Value=1         --按下USER1
 Event: Code = 0, Type = 0, Value=0
-Event: Code = 114, Type = 1, Value=0                -- 释放S4
+Event: Code = 158, Type = 1, Value=0         --释放USER1
 Event: Code = 0, Type = 0, Value=0
 ```
 
