@@ -15,7 +15,7 @@
 
 **测试过程：**
 
-* 将目录`<WORKDIR>/Examples/tty`中的可执行程序tty\_test拷贝至开发板/usr/bin/目录下，执行`tty_test -h`, 查看测试程序帮助信息，如下：    
+* 将目录`<WORKDIR>/Examples/rootfs/usr/bin/`中的可执行程序tty\_test拷贝至开发板/usr/bin/目录下，执行`tty_test -h`, 查看测试程序帮助信息，如下：    
 
 ```\`
 # tty_test -h
