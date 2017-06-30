@@ -32,7 +32,7 @@ ti-tsc
 tps65218_pwrbutton
 ```
 
-从以上查询结果可知，电阻触摸对应的设备节点为/dev/input/event2, 电容触摸对应的设备节点为/dev/input/event3。测试步骤如下：
+从以上查询结果可知，电阻触摸对应的设备节点为/dev/input/event2, 测试步骤如下：
 
 ```
 # export TSLIB_TSDEVICE=/dev/input/event3
