@@ -29,11 +29,10 @@ $ make
 编译过程中会生成一个output目录，最终生成的输出的文件位于`<WORKDIR>/Filesystem/myir-buildroot/output/images`目录。
 ```
 $ls -al output/images
-boot.vfat              readme.txt         rootfs.ext4    sdcard.img        uEnv.txt
-MLO                    rootfs.cpio        rootfs.tar     u-boot.img        zImage
-myd_c437x_idk.dtb      rootfs.cpio.gz     rootfs.tar.gz  u-boot-spl.bin
-myd_c437x_idk_lcd.dtb  rootfs.cpio.uboot  rootfs.ubi     uEnv_mmc.txt
-ramdisk.gz             rootfs.ext2        rootfs.ubifs   uEnv_ramdisk.txt
+boot.vfat               ramdisk.gz      rootfs.cpio.uboot  rootfs.tar.gz  u-boot.img     uEnv_ramdisk.txt
+MLO                     readme.txt      rootfs.ext2        rootfs.ubi     uEnv           uEnv.txt
+myd_c437x_evm.dtb       rootfs.cpio     rootfs.ext4        rootfs.ubifs   uEnv_hdmi.txt  zImage
+myd_c437x_evm_hdmi.dtb  rootfs.cpio.gz  rootfs.tar         sdcard.img     uEnv_mmc.txt
 
 ```
 output/images 目录下的输出文件基本上包含了bootloader, kernel, 以及各种格式的文件系统镜像。这些文件在接下来的系统升级章节将会详细介绍。
