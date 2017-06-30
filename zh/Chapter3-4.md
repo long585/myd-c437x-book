@@ -42,7 +42,7 @@ $ ./helloqt5 --platform linuxfb:fb=/dev/fb0
 
 ```
 $ make clean
-$ make myd_c437x_idk_qt5_defconfig
+$ make myd_c437x_evm_qt5_defconfig
 $ make
 ```
 
