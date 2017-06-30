@@ -8,7 +8,7 @@
 
 * USB转TTL调试串口线两根，一根连接开发板的J16和PC的USB host接口, PC端波特率设置115200-8-n-1；
 
-       另一根连开发板J17和PC的USBhos,tPC端波特率设置115200-8-n-1
+  另一根连开发板J17和PC的USBhost接口，PC端波特率设置115200-8-n-1
 
 **测试软件环境：**
 
@@ -17,7 +17,7 @@
 
 **测试过程：**
 
-* 将目录`<WORKDIR>/Examples/tty`中的可执行程序tty\_test拷贝至开发板/usr/bin/目录下，执行`tty_test -h`, 查看测试程序帮助信息，如下： 
+* 将目录`<WORKDIR>/Examples/rootfs/usr/bin/`中的可执行程序tty\_test拷贝至开发板/usr/bin/目录下，执行`tty_test -h`, 查看测试程序帮助信息，如下： 
 
 ```\`
 # tty_test -h
@@ -33,7 +33,7 @@ Options:
 -h | --help          Print this message
 ```
 
-* MYD-C437X-PRU开发板的J12为一个带硬件流控的RS232串口，对应的设备节点/dev/ttyO3, 两块开发板一个作为发送端另一个作为接收端，先在一块开发板执行以下命令发送数据：  
+* MYD-C437X-EVM开发板的J12为一个带硬件流控的RS232串口，对应的设备节点/dev/ttyO3, 两块开发板一个作为发送端另一个作为接收端，先在一块开发板执行以下命令发送数据：  
 
 ```
 # tty_test -d /dev/ttyO3 -b 9600 -m 0  -w 0123456789 -f -l  
