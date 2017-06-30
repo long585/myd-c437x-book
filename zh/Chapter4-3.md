@@ -61,15 +61,19 @@ Calibration constants: -384564 67056 -1268 -187936 -197 66705 65536
 ```
 # cat /sys/class/input/
 event0/ event1/ event2/ input0/ input1/ input2/ mice/   mouse0/ 
+
 # cat /sys/class/input/event0/device/name 
 gpio_key_pads@0
+
 # cat /sys/class/input/event1/device/name 
 ti-tsc
+
 # cat /sys/class/input/event2/device/name 
 tps65218_pwrbutton
+
 ```
 
-从以上查询结果可知，电容触摸对应的设备节点为/dev/input/event2, 测试步骤如下：
+从以上查询结果可知，电容触摸对应的设备节点为/dev/input/event1, 测试步骤如下：
 
 ```
 # export TSLIB_TSDEVICE=/dev/input/event2
