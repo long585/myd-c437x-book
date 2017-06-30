@@ -6,7 +6,7 @@
 
 * MYD-C437X-EVM 开发板一块  
 * MY-TFF070CV2 连接MYD-C437X-EVM J8 LCD16Bit 
-* USB转TTL调试串口一根，连接MYD-C437X-PRU J25和PC, PC端波特率设置115200-8-n-1
+* USB转TTL调试串口一根，连接MYD-C437X-PRU J16和PC, PC端波特率设置115200-8-n-1
 
 **测试软件环境：**
 
