@@ -70,28 +70,27 @@ ti-tsc
 
 # cat /sys/class/input/event2/device/name 
 tps65218_pwrbutton
-
 ```
 
 从以上查询结果可知，电容触摸对应的设备节点为/dev/input/event1, 测试步骤如下：
 
 ```
-# export TSLIB_TSDEVICE=/dev/input/event2
+# export TSLIB_TSDEVICE=/dev/input/event1
 # ts_calibrate
 xres = 800, yres = 480
-Took 3 samples...
-Top left : X =   54 Y =   55
-Took 3 samples...
-Top right : X =  740 Y =   56
-Took 3 samples...
-Bot right : X =  737 Y =  419
-Took 4 samples...
-Bot left : X =   44 Y =  425
-Took 4 samples...
-Center : X =  395 Y =  243
--4.342529 1.015266 0.018063
--9.879883 0.003775 1.036696
-Calibration constants: -284592 66536 1183 -647488 247 67940 65536
+Took 60 samples...
+Top left : X =  244 Y =  592
+Took 72 samples...
+Top right : X = 3674 Y =  604
+Took 84 samples...
+Bot right : X = 3695 Y = 3404
+Took 2 samples...
+Bot left : X =  275 Y = 3295
+Took 11 samples...
+Center : X = 2040 Y = 1881
+-2.257812 0.204344 -0.001784
+-25.022156 -0.002373 0.137957
+Calibration constants: -147968 13391 -116 -1639852 -155 9041 65536 
 ```
 
 MYIR AM437X系列其它板型Touch Screen测试情况类似。
