@@ -86,7 +86,7 @@ Event: Code = 0, Type = 0, Value=0
 测试S1按键方法类似，如下：
 
 ```
-# hexdump /dev/input/event1
+# hexdump /dev/input/event2
 0000000 3a0a 57b2 93a2 0009 0001 0074 0001 0000
 0000010 3a0a 57b2 93a2 0009 0000 0000 0000 0000
 0000020 3a0a 57b2 348b 000d 0001 0074 0000 0000
