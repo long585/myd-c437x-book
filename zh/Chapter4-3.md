@@ -35,7 +35,7 @@ tps65218_pwrbutton
 从以上查询结果可知，电阻触摸对应的设备节点为/dev/input/event1, 测试步骤如下：
 
 ```
-# export TSLIB_TSDEVICE=/dev/input/event3
+# export TSLIB_TSDEVICE=/dev/input/event1
 # ts_calibrate
 xres = 800, yres = 480
 Took 4 samples...
