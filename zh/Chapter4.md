@@ -54,7 +54,7 @@ clean:
 $ cd <WORKDIR>/Examples/
 $ make OPTION=MYD-C437X-EVM clean
 $ make OPTION=MYD-C437X-EVM
-$
+$ make OPTION=MYD-C437X-PRU install
 ```
 
 也可以一个一个的单独编译，例如:
