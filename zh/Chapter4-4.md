@@ -55,7 +55,7 @@ Mon Aug 15 18:00:38 UTC 2016
 * 将开发板断电，经过一段时间之后，重新上电开机，再次通过hwclock读出rtc的时间，如下：  
 
 ```
-# hwclock -r /dev/rtc1                            -- 
+# hwclock -r /dev/rtc                            -- 
 Mon Aug 15 18:11:08 2016  0.000000 seconds
 ```
 
