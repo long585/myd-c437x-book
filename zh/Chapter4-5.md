@@ -33,7 +33,7 @@ Options:
 -h | --help          Print this message
 ```
 
-* MYD-C437X-EVM开发板的J17为一个带硬件流控的RS232串口，对应的设备节点/dev/ttyO3, 两块开发板一个作为发送端另一个作为接收端，先在一块开发板执行以下命令发送数据：  
+* MYD-C437X-EVM开发板的J17为一个带硬件流控的RS232串口，对应的设备节点/dev/ttyO3, 先在PC打开J16串口对应的终端，执行以下命令发送数据：  
 
 ```
 # tty_test -d /dev/ttyO3 -b 9600 -m 0  -w 0123456789 -f -l  
