@@ -23,7 +23,7 @@ boot   Config.in.legacy  DEVELOPERS  fs    Makefile.legacy  README   toolchain
 
 Buildroot构建的过程类似于Linux Kernel的构建，只需要简单的两个命令就可以完成。MYD-C437X-EVM平台默认的配置文件位于*myir-buildroot/configs/myd_c437x_evm_defconfig*. 其中主要包含一些硬件测试相关的工具，	用户也可以根据不同的应用场景需要编写自己的配置文件。
 ```
-$ make myd_c437x_idk_defconfig
+$ make myd_c437x_evm_defconfig
 $ make
 ```
 编译过程中会生成一个output目录，最终生成的输出的文件位于`<WORKDIR>/Filesystem/myir-buildroot/output/images`目录。
