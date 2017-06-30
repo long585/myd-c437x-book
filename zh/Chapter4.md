@@ -46,15 +46,17 @@ $(TARGET) : $(OBJS)
         $(CC) $(CFLAGS) -c $< -o $@ 
 clean:
         $(RM) *.o $(TARGET)
-
 ```
 
 用户可以一次完成所有示例的编译，如下:
 
 ```
 $ cd <WORKDIR>/Examples/
-$ make 
+$ make OPTION=MYD-C437X-PRU clean
+$ make OPTION=MYD-C437X-PRU
 ```
+
+
 
 也可以一个一个的单独编译，例如:
 
