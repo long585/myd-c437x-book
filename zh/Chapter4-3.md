@@ -22,17 +22,6 @@
 #  ls /dev/input/
 by-path  event0   event1   event2   mice     mouse0
 
-# cat /sys/class/input/event0/device/name
-volume_keys@0
-
-# cat /sys/class/input/event1/device/name
-tps65218_pwrbutton
-
-# cat /sys/class/input/event2/device/name
-ti-tsc
-
-# cat /sys/class/input/event3/device/name
-ft5x06_ts
 # cat /sys/class/input/event0/device/name 
 gpio_key_pads@0
 # cat /sys/class/input/event1/device/name 
