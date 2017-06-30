@@ -25,11 +25,35 @@ $ export CROSS_COMPILE=arm-linux-myir-gnueabihf-
 $ export PATH=$PATH:<WORKDIR>/Filesystem/myir-buildroot/output/host/usr/bin
 ```
 
+Camera和Audio例程的Makefile需要指定依赖库的目录和头文件的目录,下面以Camera的例程为例子：
+
+```
+$ cd <WORKDIR>/Examples/camera
+$ cat Makefile
+CC = $(CROSS_COMPILE)gcc
+CFLAGS ?=-I /<WORKDIR>/Filesystem/myir-buildroot/output/host/usr/arm-myir-linux-gnueabihf/sysroot/usr/include/libdrm/ \
+                 -I <WORKDIR>/Filesystem/myir-buildroot/output/host/usr/arm-myir-linux-gnueabihf/sysroot/usr/include \
+                 -I <WORKDIR>/Filesystem/myir-buildroot/output/host/usr/arm-myir-linux-gnueabihf/sysroot/usr/include/omap
+LDFLAGS ?=  -lpthread  -ljpeg -ldrm -ldrm_omap -L <WORKDIR>/Filesystem/myir-buildroot/output/host/usr/arm-myir-linux-gnueabihf/sysroot/usr/lib
+TARGET = $(notdir $(CURDIR))_test
+SRC =  $(shell ls *.c)
+OBJS = $(patsubst %.c ,%.o ,$(SRC))
+.PHONY: all
+all: $(TARGET)
+$(TARGET) : $(OBJS)
+        $(CC) $(CFLAGS) $(LDFLAGS) -o $@ $^
+%.o : %.c
+        $(CC) $(CFLAGS) -c $< -o $@ 
+clean:
+        $(RM) *.o $(TARGET)
+
+```
+
 用户可以一次完成所有示例的编译，如下:
 
 ```
 $ cd <WORKDIR>/Examples/
-$ make
+$ make 
 ```
 
 也可以一个一个的单独编译，例如:
