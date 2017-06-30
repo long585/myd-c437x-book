@@ -20,7 +20,7 @@
 
 ```
 #  ls /dev/input/
-by-path  event0   event1   event2   event3   mice     mouse0   mouse1
+by-path  event0   event1   event2   mice     mouse0
 
 # cat /sys/class/input/event0/device/name
 volume_keys@0
