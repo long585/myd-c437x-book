@@ -14,7 +14,7 @@
 
 **测试过程:**
 
-* 将目录`<WORKDIR>/Examples/keypad`中的可执行程序keypad\_test拷贝至开发板/usr/bin/目录下, 执行该程序进行测试如下：
+* 将目录`<WORKDIR>/Examples/rootfs/usr/bin/`中的可执行程序keypad\_test拷贝至开发板/usr/bin/目录下, 执行该程序进行测试如下：
 
 ```
 $ chmod 777 /usr/bin/keypad_test
