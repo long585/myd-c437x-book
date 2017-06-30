@@ -4,8 +4,8 @@
 
 **测试硬件环境：**
 
-* MYD-C437X-EVM 开发板两块  
-* 数据线连接两块板的J12，GND&lt;-&gt;GND，TXD&lt;-&gt;RXD，RXD&lt;-&gt;TXD, CTS&lt;-&gt;RTS， RTS&lt;-&gt;CTS。  
+* MYD-C437X-EVM 开发板
+* 网线一根，接入开发板J11
 * USB转TTL调试串口线两根，分别连接两块板的J25和PC的USB host接口, PC端波特率设置115200-8-n-1
 
 **测试软件环境：**
