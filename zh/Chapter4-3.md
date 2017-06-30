@@ -56,20 +56,17 @@ Center : X =  394 Y =  245
 Calibration constants: -384564 67056 -1268 -187936 -197 66705 65536
 ```
 
-* 断电，连接电容触摸模组，启动开发板，查看触摸设备对应的设备节点。  
+* 断电，连接电阻触摸模组，启动开发板，查看触摸设备对应的设备节点。  
 
 ```
-#  ls /dev/input/
-by-path  event0   event1   event2   mice     mouse0   mouse1
-
-# cat /sys/class/input/event0/device/name
-volume_keys@0
-
-# cat /sys/class/input/event1/device/name
-tps65218_pwrbutton
-
-# cat /sys/class/input/event2/device/name
+# cat /sys/class/input/
+event0/ event1/ event2/ input0/ input1/ input2/ mice/   mouse0/ 
+# cat /sys/class/input/event0/device/name 
+gpio_key_pads@0
+# cat /sys/class/input/event1/device/name 
 ti-tsc
+# cat /sys/class/input/event2/device/name 
+tps65218_pwrbutton
 ```
 
 从以上查询结果可知，电容触摸对应的设备节点为/dev/input/event2, 测试步骤如下：
