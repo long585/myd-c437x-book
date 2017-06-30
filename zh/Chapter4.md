@@ -52,11 +52,10 @@ clean:
 
 ```
 $ cd <WORKDIR>/Examples/
-$ make OPTION=MYD-C437X-PRU clean
-$ make OPTION=MYD-C437X-PRU
+$ make OPTION=MYD-C437X-EVM clean
+$ make OPTION=MYD-C437X-EVM
+$
 ```
-
-
 
 也可以一个一个的单独编译，例如:
 
