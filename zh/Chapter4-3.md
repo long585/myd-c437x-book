@@ -19,23 +19,22 @@
 * 连接电阻触摸模组，启动开发板，查看触摸设备对应的设备节点。  
 
 ```
-#  ls /dev/input/
-by-path  event0   event1   event2   mice     mouse0
-
+# ls /dev/input/
+by-path  event0   event1   event2   event3   mice     mouse0   mouse1
 # cat /sys/class/input/event0/device/name 
 gpio_key_pads@0
-
 # cat /sys/class/input/event1/device/name 
-ti-tsc
-
-# cat /sys/class/input/event2/device/name 
 tps65218_pwrbutton
+# cat /sys/class/input/event2/device/name 
+ti-tsc
+# cat /sys/class/input/event3/device/name 
+ft5x06_ts
 ```
 
 从以上查询结果可知，电阻触摸对应的设备节点为/dev/input/event1, 测试步骤如下：
 
 ```
-# export TSLIB_TSDEVICE=/dev/input/event1
+# export TSLIB_TSDEVICE=/dev/input/event3
 # ts_calibrate
 xres = 800, yres = 480
 Took 4 samples...
