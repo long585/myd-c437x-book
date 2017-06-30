@@ -37,7 +37,7 @@ Options:
 * 将开发板断电，经过一段时间之后，重新上电开机，再次通过rtc\_test读出rtc的时间，如下：  
 
 ```
-# rtc_test -d /dev/rtc1
+# rtc_test -d /dev/rtc
 
   Current RTC date/time is 18-11-2016, 17:59:12.
 ```
