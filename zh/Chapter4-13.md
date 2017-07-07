@@ -12,8 +12,8 @@
 **测试软件环境：**
 
 * Linux Kernel 4.1.18
-* ifconfig, ping等命令     
-* pru\_led\_test 应用程序  
+
+* camera\_test应用程序
 
 **测试过程：**
 
