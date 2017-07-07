@@ -1,4 +1,4 @@
-# MYD-C437X-PRU-Linux-4.1.18开发手册
+# MYD-C437X-EVM-Linux-4.1.18开发手册
 
 
 ##前言  
