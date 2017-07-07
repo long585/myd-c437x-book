@@ -51,10 +51,10 @@ Options:
 -d | --device name   led name myc:blue:cpu0
 -l | --light brightness   led brightness. 0~255 0: off.
 -h | --help                Print this message
-# led_test -d myc:blue:cpu0 -l 0
-Set led myc:blue:cpu0 off, brightness = 0
-# led_test -d myc:blue:cpu0 -l 1
-Set led myc:blue:cpu0 off, brightness = 1
+# led_test -d myc_d36 -l 0
+Set led myc_d36 off, brightness = 0
+# led_test -d myc_d36 -l 1
+Set led myc_d36 off, brightness = 1
 ```
 
 * 观察LED的变化  
