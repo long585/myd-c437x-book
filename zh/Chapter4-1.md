@@ -41,7 +41,7 @@ Set gpio3_7 level high success!
 Set gpio3_7 level low success!
 ```
 
-用户也可以通过shell脚本，使用echo和cat命令来实现对/sys/class/gpio下文件的访问。例如:/usr/bin/set\_eeprom.sh
+用户也可以通过shell脚本，使用echo和cat命令来实现对/sys/class/gpio下文件的访问。例如:set\_eeprom.sh
 
 ```
 #!/bin/bash
