@@ -53,9 +53,9 @@ u-boot.img          MLO             helloworld
 ```
 #
 # [14018.109698] usb 1-1: USB disconnect, device number 2
-
-
 ```
+
+* 其他三个USB接口测试方法参照上面操作
 
 MYIR AM437X系列其它板型USB Host接口测试情况类似。
 
