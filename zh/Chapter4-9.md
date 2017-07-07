@@ -14,12 +14,13 @@ Linux系统下，LED的控制主要是通过访问sysfs文件系统下文件节�
 
 **测试过程：**
 
+MYD-C437X-EVM由核心板和底板组成，底板上面有四个LED:D34、D35、D36、D39，核心板有两个LED:D1、D36，其中D1和D39不由软件控制，其他四个LED在软件上的命名通过myc和myd前缀来区分。
+
 * 查看led设备的设备节点  
 
 ```
 # ls /sys/class/leds/
-myc:blue:cpu0       myd:blue:mmc1
-myd:blue:heartbeat  myd:blue:usr3
+myc_d36  myd_d34  myd_d35  myd_d36
 ```
 
 * 用'echo'命令对LED进行控制  
