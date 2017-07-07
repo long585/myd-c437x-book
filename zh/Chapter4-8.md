@@ -14,6 +14,8 @@
 
 **测试过程:**
 
+MYD-C437X-EVM开发板提供了四个按键POWER\(SW1\)、RESET\(SW2\)、USER0\(SW3\)、USER1\(SW4\)，其中RESET键按下会复位系统所以不在本次测试中测试。
+
 * 将目录`<WORKDIR>/Examples/rootfs/usr/bin/`中的可执行程序keypad\_test拷贝至开发板/usr/bin/目录下, 执行该程序进行测试如下：
 
 ```
