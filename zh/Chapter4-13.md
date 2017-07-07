@@ -7,7 +7,7 @@
 * MYD-C437X-EVM 开发板一块
 * MY-CAM011B摄像头模块两个
 
-* USB转TTL调试串口一根，连接MYD-C437X-EVM J25和PC, PC端波特率设置115200-8-n-1
+* USB转TTL调试串口一根，连接MYD-C437X-EVM J16和PC, PC端波特率设置115200-8-n-1
 
 **测试软件环境：**
 
