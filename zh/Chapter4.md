@@ -4,7 +4,7 @@
 
 本节主要介绍设备驱动功能验证的一些方法，并提供一些基本的应用开发示例实现对设备的操作。
 
-MYD-AM437X系列提供了常用外设的演示程序，程序以及源码都位于`<WORKDIR>/Examples/`, 请根据目录内的Makefile或README文件进行编译：
+MYD-AM437X-EVM系列提供了常用外设的演示程序，程序以及源码都位于`<WORKDIR>/Examples/`, 请根据目录内的Makefile或README文件进行编译：
 
 ```
 $ cd <WORKDIR>/Examples/
