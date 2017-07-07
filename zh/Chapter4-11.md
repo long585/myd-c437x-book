@@ -15,7 +15,7 @@
 
 **测试过程：**
 
-* 将U盘连接到开发板USB Host接口，并且执行mount, umount，读写，插拔等操作。插入U盘至USB Host接口J7时内核提示信息如下：  
+* 将U盘连接到开发板USB Host接口，并且执行mount, umount，读写，插拔等操作。插入U盘至USB Host接口J13时内核提示信息如下：  
 
 ```
 # [13752.969569] usb 1-1: new high-speed USB device number 2 using xhci-hcd
