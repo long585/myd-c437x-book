@@ -5,7 +5,7 @@
 **测试硬件环境：**
 
 * MYD-C437X-EVM 开发板一块  
-* 请确认板上带有EEPROM芯片，MYD-C437X-PRU核心板带有EEPROM芯片24256E  
+* 请确认板上带有EEPROM芯片，MYD-C437X-EVM核心板带有EEPROM芯片24256E  
 * USB转TTL调试串口一根，连接MYD-C437X-PRU J25和PC, PC端波特率设置115200-8-n-1
 
 **测试软件环境：**
