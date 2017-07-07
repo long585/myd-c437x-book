@@ -1,27 +1,30 @@
-###4.13 PRU测试
+### 4.13 CAMERA
 
-本例程演示Linux系统下如何在用户空间使用rpmsg实现和PRU的通讯，PRUSS0实现LED控制的功能，通过rpmsg向PRU发送0~7这几个数字字符，PRU根据收到的数字对板上3个LED进行控制。
-PRUSS1实现工业以太网扩展的功能，下面分别加以说明。   
+本例程演示Linux系统下如何在用户空间使用rpmsg实现和PRU的通讯，PRUSS0实现LED控制的功能，通过rpmsg向PRU发送0~7这几个数字字符，PRU根据收到的数字对板上3个LED进行控制。  
+PRUSS1实现工业以太网扩展的功能，下面分别加以说明。
 
-**测试硬件环境：**  
-  * MYD-C437X-PRU 开发板一块
-  * CAT5 网线三根,4口或以上交换机一台  
-  * USB转TTL调试串口一根，连接MYD-C437X-PRU J25和PC, PC端波特率设置115200-8-n-1
+**测试硬件环境：**
 
-**测试软件环境：**  
-  * Linux Kernel 4.1.18
-  * ifconfig, ping等命令     
-  * pru_led_test 应用程序  
+* MYD-C437X-PRU 开发板一块
+* CAT5 网线三根,4口或以上交换机一台  
+* USB转TTL调试串口一根，连接MYD-C437X-PRU J25和PC, PC端波特率设置115200-8-n-1
 
-**测试过程：**  
-  * 测试PRUSS1扩展工业以太网接口  
-MYD-C437X-PRU开发板默认出厂固件为PRU Ethernet工作模式，实现一个千兆以太网接口J6和两个PRUSS1扩展的百兆工业以太网接口(J26和J27)。
-三个网口可以独立工作。将三个网口连接到交换机和PC一起组成一个小型网络，然后测试如下：  
+**测试软件环境：**
+
+* Linux Kernel 4.1.18
+* ifconfig, ping等命令     
+* pru\_led\_test 应用程序  
+
+**测试过程：**
+
+* 测试PRUSS1扩展工业以太网接口  
+  MYD-C437X-PRU开发板默认出厂固件为PRU Ethernet工作模式，实现一个千兆以太网接口J6和两个PRUSS1扩展的百兆工业以太网接口\(J26和J27\)。
+  三个网口可以独立工作。将三个网口连接到交换机和PC一起组成一个小型网络，然后测试如下：  
 
 ```
 # ifconfig -a
 can0      Link encap:UNSPEC  HWaddr 00-00-00-00-00-00-00-00-00-00-00-00-00-00-00
-					NOARP  MTU:16  Metric:1
+                    NOARP  MTU:16  Metric:1
           RX packets:0 errors:0 dropped:0 overruns:0 frame:0
           TX packets:0 errors:0 dropped:0 overruns:0 carrier:0
           collisions:0 txqueuelen:10
@@ -51,8 +54,9 @@ eth2      Link encap:Ethernet  HWaddr 72:90:07:2B:6C:10
           TX packets:0 errors:0 dropped:0 overruns:0 carrier:0
           collisions:958943060 txqueuelen:1000
           RX bytes:0 (0.0 B)  TX bytes:0 (0.0 B)
-```  
-系统默认只使能了eth0, eth1和eth2可以通过如下命令手动设置IP地址并使能，如下：  
+```
+
+系统默认只使能了eth0, eth1和eth2可以通过如下命令手动设置IP地址并使能，如下：
 
 ```
 # ifconfig eth1 192.168.30.117 netmask 255.255.255.0 up
@@ -78,32 +82,33 @@ intr_channels = 0x0000012a host_intr = 0x0000022a
 [ 1442.945432] IPv6: ADDRCONF(NETDEV_UP): eth2: link is not ready
 # [ 1445.159906] eth2: Link is Up - 100Mbps/Full - flow control rx/tx
 [ 1445.166334] IPv6: ADDRCONF(NETDEV_CHANGE): eth2: link becomes ready
-```  
-以上Log信息显示PRU Ethernet连接正常，接下来可以在PC上使用ping命令和开发板上的网口依次进行连通测试，也可以进一步使用iperf工具进行测试，这里不详细介绍了。
-	   
-  * 测试PRUSS0控制GPIO LED   
+```
 
-定制内核和设备树, 由于MYD-C437X-PRU默认发布的代码使用的是PRUSS1以实现工业以太网接口的扩展，而板上的LED是通过PRUSS0来控制的。
-所以需要给内核打上相应的补丁进行切换。补丁打上之后，重新编译zImage和dtbs。补丁内容参见出厂附带资料04-Linux_sources/patches/0001-Enable-PRUSS0-instead-of-PRUSS1-on-the-MYD_C437x_PRU.
-由于补丁内容较长，这里仅摘取关于pinmux配置的部分加以说明，如下：  
-  
-```  
+以上Log信息显示PRU Ethernet连接正常，接下来可以在PC上使用ping命令和开发板上的网口依次进行连通测试，也可以进一步使用iperf工具进行测试，这里不详细介绍了。
+
+* 测试PRUSS0控制GPIO LED   
+
+定制内核和设备树, 由于MYD-C437X-PRU默认发布的代码使用的是PRUSS1以实现工业以太网接口的扩展，而板上的LED是通过PRUSS0来控制的。  
+所以需要给内核打上相应的补丁进行切换。补丁打上之后，重新编译zImage和dtbs。补丁内容参见出厂附带资料04-Linux\_sources/patches/0001-Enable-PRUSS0-instead-of-PRUSS1-on-the-MYD\_C437x\_PRU.  
+由于补丁内容较长，这里仅摘取关于pinmux配置的部分加以说明，如下：
+
+```
 // 修改pinmux模式，将AD21, AE22, AD22三个GPIO由arm控制改为由pru控制。
 @@ -168,9 +148,10 @@
-	leds_pins: leds_pins {
-		pinctrl-single,pins = <
-			0x244 ( PIN_OUTPUT_PULLUP | MUX_MODE7 ) /* (F23) gpio5_11.gpio5[11] */
--			0x1f0 ( PIN_OUTPUT_PULLUP | MUX_MODE7 ) /* (AD21) cam1_data2.gpio4[16] */
--			0x1f4 ( PIN_OUTPUT_PULLUP | MUX_MODE7 ) /* (AE22) cam1_data3.gpio4[17] */
--			0x1f8 ( PIN_OUTPUT_PULLUP | MUX_MODE7 ) /* (AD22) cam1_data4.gpio4[18] */
-+			0x1f0 ( PIN_OUTPUT_PULLUP | MUX_MODE4 ) /* (AD21) cam1_data2.pr0_pru1_gpo[10] */
-+			0x1f4 ( PIN_OUTPUT_PULLUP | MUX_MODE4 ) /* (AE22) cam1_data3.pr0_pru1_gpo[11] */
-+			0x1f8 ( PIN_OUTPUT_PULLUP | MUX_MODE4 ) /* (AD22) cam1_data4.pr0_pru1_gpo[12] */
-+			
+    leds_pins: leds_pins {
+        pinctrl-single,pins = <
+            0x244 ( PIN_OUTPUT_PULLUP | MUX_MODE7 ) /* (F23) gpio5_11.gpio5[11] */
+-            0x1f0 ( PIN_OUTPUT_PULLUP | MUX_MODE7 ) /* (AD21) cam1_data2.gpio4[16] */
+-            0x1f4 ( PIN_OUTPUT_PULLUP | MUX_MODE7 ) /* (AE22) cam1_data3.gpio4[17] */
+-            0x1f8 ( PIN_OUTPUT_PULLUP | MUX_MODE7 ) /* (AD22) cam1_data4.gpio4[18] */
++            0x1f0 ( PIN_OUTPUT_PULLUP | MUX_MODE4 ) /* (AD21) cam1_data2.pr0_pru1_gpo[10] */
++            0x1f4 ( PIN_OUTPUT_PULLUP | MUX_MODE4 ) /* (AE22) cam1_data3.pr0_pru1_gpo[11] */
++            0x1f8 ( PIN_OUTPUT_PULLUP | MUX_MODE4 ) /* (AD22) cam1_data4.pr0_pru1_gpo[12] */
++
+```
 
-```   
-  * 编译PRU端的firmware。PRU端的firmware使用ti-cgt-pru_2.1.3编译器进行编译，对应的代码参见04-Linux_Source\Examples\pru_led目录下的代码PRU_RPMsg_LED0_1。
-编译之后得到PRU_RPMsg_LED0_1.out，将其拷贝到linux文件系统/lib/firmware/目录下，并重命名为am437x-pru0_1-fw  
+* 编译PRU端的firmware。PRU端的firmware使用ti-cgt-pru\_2.1.3编译器进行编译，对应的代码参见04-Linux\_Source\Examples\pru\_led目录下的代码PRU\_RPMsg\_LED0\_1。
+  编译之后得到PRU\_RPMsg\_LED0\_1.out，将其拷贝到linux文件系统/lib/firmware/目录下，并重命名为am437x-pru0\_1-fw  
 
 ```
 $ cd <WORKDIR>/ToolChain/
@@ -116,11 +121,11 @@ Building project: PRU_RPMsg_LED0_1
 
 Finished building project: PRU_RPMsg_LED0_1
 ************************************************************
+```
 
-```     
-  * 重新启动系统，如果Linux系统下出现/dev/rpmsg_pru31设备节点，则说明PRU工作正常，且正确加载了firmware，才可以进行以下测试。
-在zImage和dtbs不变的情况下，也可以通过重新加载pru_rproc.ko实现PRU firmware的加载  
-  
+* 重新启动系统，如果Linux系统下出现/dev/rpmsg\_pru31设备节点，则说明PRU工作正常，且正确加载了firmware，才可以进行以下测试。
+  在zImage和dtbs不变的情况下，也可以通过重新加载pru\_rproc.ko实现PRU firmware的加载  
+
 ```
 # rmmod pru_rproc -f
 [ 5702.650841] pru-rproc 54478000.pru1: pru_rproc_remove: removing rproc 54478000.pru1
@@ -166,11 +171,11 @@ compatibility isn't yet guaranteed.
 probed successfully
 [ 5707.503186] virtio_rpmsg_bus virtio1: creating channel rpmsg-pru addr 0x1f
 # [ 5707.517016] rpmsg_pru rpmsg5: new rpmsg_pru device: /dev/rpmsg_pru31
+```
+
+* pru\_led\_test程序对LED进行控制  
 
 ```
-  * pru_led_test程序对LED进行控制  
-    
-```  
 # pru_led_test -h
 Usage: pru_led_test [options]
 
@@ -189,10 +194,9 @@ Opened /dev/rpmsg_pru31, sending 1 messages
 1 - Received from PRU:7
 
 Received 1 messages, closing /dev/rpmsg_pru31
+```
 
-```  
-  * 观察LED的变化, 会发现三个LED随着-n后面参数变化而变化。变化的规律就是数字转化为二进制之后，对应位为1的灯点亮，为0的熄灭。例如3的二进制位011b,则对应D18熄灭,D19,D20两个LED灯亮
-
-
+* 观察LED的变化, 会发现三个LED随着-n后面参数变化而变化。变化的规律就是数字转化为二进制之后，对应位为1的灯点亮，为0的熄灭。例如3的二进制位011b,则对应D18熄灭,D19,D20两个LED灯亮
 
 MYIR AM437X系列其它板型PRU测试可以参照本例程进行。
+
