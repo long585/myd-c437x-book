@@ -59,7 +59,7 @@ Set led myc_d36 off, brightness = 1
 
 * 观察LED的变化  
 
-> 注意：由于myc\_d36 设置了触发器为cpu0, 所以不能直接控制，需要先往/sys/class/leds/myc\_d36 /brightness文件节点写"0", 使触发器失效之后才能像其它LED一样正常控制。
+> 注意：由于myc\_d36 设置了触发器为cpu0, 所以不能直接控制，需要先往/sys/class/leds/myc\_d36/brightness文件节点写"0", 使触发器失效之后才能像其它LED一样正常控制。
 
 MYIR AM437X系列其它板型LED测试情况类似。
 
