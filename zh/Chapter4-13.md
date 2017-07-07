@@ -79,7 +79,7 @@ Exported buffer fd = 18
 
 运行成功后即可在7寸LCD显示屏上看到两个摄像头的画面
 
-* MYIR AM437X系列其它板型PRU测试可以参照本例程进行。
+* MYIR AM437X系列其它板型camera测试可以参照本例程进行。
 
 
 
