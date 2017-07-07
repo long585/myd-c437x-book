@@ -26,7 +26,7 @@ myc_d36  myd_d34  myd_d35  myd_d36
 * 用'echo'命令对LED进行控制  
 
 ```
-#echo "0" > /sys/class/leds/myc:blue:cpu0/brightness
+#echo "0" > /sys/class/leds/myc_d36/brightness
 #echo "1" > /sys/class/leds/myc:blue:cpu0/brightness
 #echo "0" > /sys/class/leds/myc:blue:cpu0/brightness
 
