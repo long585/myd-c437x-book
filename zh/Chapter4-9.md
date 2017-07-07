@@ -39,7 +39,7 @@ myd:blue:heartbeat  myd:blue:usr3
 #echo "0" > /sys/class/leds/myd:blue:usr3/brightness
 ```
 
-* 用'led\_test'应用程序对LED进行控制   
+* 将目录`<WORKDIR>/Examples/rootfs/usr/bin/`中的可执行程序led\_test拷贝至开发板/usr/bin/目录下用'led\_test'应用程序对LED进行控制   
 
 ```
 # led_test -h
