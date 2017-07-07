@@ -27,17 +27,17 @@ myc_d36  myd_d34  myd_d35  myd_d36
 
 ```
 #echo "0" > /sys/class/leds/myc_d36/brightness
-#echo "1" > /sys/class/leds/myc:blue:cpu0/brightness
-#echo "0" > /sys/class/leds/myc:blue:cpu0/brightness
+#echo "1" > /sys/class/leds/myc_d36/brightness
 
-#echo "1" > /sys/class/leds/myd:blue:mmc1/brightness
-#echo "0" > /sys/class/leds/myd:blue:mmc1/brightness
 
-#echo "1" > /sys/class/leds/myd:blue:heartbeat/brightness
-#echo "0" > /sys/class/leds/myd:blue:heartbeat/brightness
+#echo "1" > /sys/class/leds/myd_d34/brightness
+#echo "0" > /sys/class/leds/myd_d34/brightness
 
-#echo "1" > /sys/class/leds/myd:blue:usr3/brightness
-#echo "0" > /sys/class/leds/myd:blue:usr3/brightness
+#echo "1" > /sys/class/leds/myd_d35/brightness
+#echo "0" > /sys/class/leds/myd_d35/brightness
+
+#echo "1" > /sys/class/leds/myd_d36/brightness
+#echo "0" > /sys/class/leds/myd_d36/brightness
 ```
 
 * 将目录`<WORKDIR>/Examples/rootfs/usr/bin/`中的可执行程序led\_test拷贝至开发板/usr/bin/目录下用'led\_test'应用程序对LED进行控制   
