@@ -16,7 +16,7 @@
 
 **测试过程：**
 
-* 开发板上的系统起来后，使用USB mini B to USB A转接线连接开发板（J8接口）与电脑端，其中USB mini B接口连接开发板，USB A接口连接电脑端，插入TF卡（J19）,在开发板上运行如下命令：  
+* 开发板上的系统起来后，使用USB mini B to USB A转接线连接开发板（J14接口）与电脑端，其中USB mini B接口连接开发板，USB A接口连接电脑端，插入TF卡（J19）,在开发板上运行如下命令：  
 
 ```
 # modprobe g_mass_storage stall=0 file=/dev/mmcblk0p1 removable=1
