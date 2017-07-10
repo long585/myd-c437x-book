@@ -86,7 +86,7 @@ Buildroot编译完成之后生成的sdcard.img同样可以烧写到EMMC上，用
 ```
 # /updatesys.sh 
 All data on eMMC now will be destroyed! Continue? [y/n]
-y
+y           //此处为用户输入，
 [  138.794247] FAT-fs (mmcblk0p1): Volume was not properly unmounted. Some data may be corrupt. Please run fsck.
 1024+0 records in
 1024+0 records out
@@ -117,8 +117,7 @@ Writing superblocks and filesystem accounting information: done
 ===> Updating filesystem to emmc...
 
 
- Update system completed, The board can be booted from eMMC now 
-
+ Update system completed, The board can be booted from eMMC now
 ```
 
 ** NFS ROOT启动\(挂载NFS ROOT文件系统\) **
