@@ -37,11 +37,11 @@ MYD AM437X系列每一块开发板出厂附带资料中都包含了对应开发�
 ** U-Boot环境变量说明 **
 
 使用TF卡或EMMC启动的时候，经常会用到uEnv.txt文件对U-Boot进行环境变量的设置。通过修改uEnv.txt下面的fdtfile参数，可以在启动时加载不同的设备树文件，从而适配不同的硬件配置。  
-例如MYD-C437X-EVM开发板硬件复用，可以通过uEnv.txt设置不同的fdtfile来实现。
+例如MYD-C437X-EVM开发板，可以通过uEnv.txt设置不同的fdtfile来实现。
 
 ```
-#fdtfile=myd_c437x_evm.dtb        # 使用e
-#fdtfile=myd_c437x_idk_lcd.dtb   # 使用LCD
+#fdtfile=myd_c437x_evm.dtb        # 不使用HDMI
+#fdtfile=myd_c437x_idk_lcd.dtb   # 使用HDMI
 ```
 
 ** TF卡启动\(EXT4文件系统\) **
