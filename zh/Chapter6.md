@@ -12,8 +12,8 @@ MYD AM437X系列每一块开发板出厂附带资料中都包含了对应开发�
 | --- | --- |
 | MLO | 一级引导（SPL） |
 | u-boot.img | 二级引导程序 |
-| myd\_c437x\_evm.dtb | MYD-C437X-EVM开发板工业以太网配置设备树 |
-| myd\_c437x\_evm\_hdmi.dtb | MYD-C437X-PRU开发板7"LCD配置设备树 |
+| myd\_c437x\_evm.dtb | MYD-C437X-EVM开发板配置设备树 |
+| myd\_c437x\_evm\_hdmi.dtb | MYD-C437X-EVM开发板HDMI配置设备树 |
 | zImage | 内核镜像 |
 | uEnv.txt | 默认环境变量 |
 | uEnv\_ramdisk.txt | 使用RAM DISK文件系统时的环境变量，实际使用时用该文件替换uEnv.txt放置到TF卡根目录 |
