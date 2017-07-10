@@ -84,15 +84,41 @@ Buildroot编译完成之后生成的sdcard.img同样可以烧写到EMMC上，用
 * 烧写完成之后，拔下TF卡，设置开发板为EMMC启动模式，上电即可从EMMC引导启动，并加载位于EMMC上的EXT4文件系统。
 
 ```
-# /updatesys.sh
-tf card insert
-mount: mounting /dev/mmcblk0 on /tmp/extsd failed: Invalid argument
-193+1 records in[6.04MiB/s] [                                       <=>        ]
-193+1 records out
- 193MiB 0:00:43 [4.41MiB/s] [                                        <=>       ]
-396059+0 records in
-396059+0 records out
-#
+# /updatesys.sh 
+All data on eMMC now will be destroyed! Continue? [y/n]
+y
+[  138.794247] FAT-fs (mmcblk0p1): Volume was not properly unmounted. Some data may be corrupt. Please run fsck.
+1024+0 records in
+1024+0 records out
+DISK SIZE - 3867148288 bytes
+mkfs.fat 4.0 (2016-05-06)
+mkfs.fat: warning - lowercase labels might not work properly with DOS or Windows
+mkfs.fat 4.0 (2016-05-06)
+mkfs.fat: warning - lowercase labels might not work properly with DOS or Windows
+umount: /dev/mmcblk1p2: not mounted
+mke2fs 1.43.3 (04-Sep-2016)
+/dev/mmcblk1p2 contains a ext4 file system labelled 'rootfs'
+        last mounted on /root/rootfs on Mon Jul  3 16:48:15 2017
+Proceed anyway? (y,n) y
+Discarding device blocks: done                            
+Creating filesystem with 261615 4k blocks and 65408 inodes
+Filesystem UUID: ec25c446-3589-4f51-a6ff-d092053157e5
+Superblock backups stored on blocks: 
+        32768, 98304, 163840, 229376
+
+Allocating group tables: done                            
+Writing inode tables: done                            
+Creating journal (4096 blocks): done
+Writing superblocks and filesystem accounting information: done
+
+===> Update loader to emmc...
+===> Updating kernel and devicetree to emmc...
+===> Update uEnv to emmc...
+===> Updating filesystem to emmc...
+
+
+ Update system completed, The board can be booted from eMMC now 
+
 ```
 
 ** NFS ROOT启动\(挂载NFS ROOT文件系统\) **
