@@ -99,7 +99,7 @@ umount: /dev/mmcblk1p2: not mounted
 mke2fs 1.43.3 (04-Sep-2016)
 /dev/mmcblk1p2 contains a ext4 file system labelled 'rootfs'
         last mounted on /root/rootfs on Mon Jul  3 16:48:15 2017
-Proceed anyway? (y,n) y //此处为用户输入，去人下面操作是否继续
+Proceed anyway? (y,n) y //此处为用户输入，确认下面操作是否继续
 Discarding device blocks: done                            
 Creating filesystem with 261615 4k blocks and 65408 inodes
 Filesystem UUID: ec25c446-3589-4f51-a6ff-d092053157e5
