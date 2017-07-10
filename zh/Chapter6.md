@@ -25,7 +25,7 @@ MYD AM437X系列每一块开发板出厂附带资料中都包含了对应开发�
 | matrix-rootfs.ubi | TI官方ubifs文件系统镜像 |
 | matrix-rootfs.tar.gz | TI官方ubifs文件系统目录压缩包 |
 
-`MYD-C437X-PRU`开发板目前提供了多种系统引导加载方案。
+`MYD-C437X-EVM`开发板目前提供了多种系统引导加载方案。
 
 * 方案1: TF卡启动\(EXT4文件系统\)
 * 方案2: TF卡启动\(Ramdisk文件系统\)
@@ -40,7 +40,7 @@ MYD AM437X系列每一块开发板出厂附带资料中都包含了对应开发�
 例如MYD-C437X-PRU开发板硬件LCD与PRU Ethernet复用，可以通过uEnv.txt设置不同的fdtfile来实现。
 
 ```
-fdtfile=myd_c437x_idk.dtb        # 使用PRU Ethernet
+fdtfile=myd_c437x_evm.dtb        # 使用PRU Ethernet
 #fdtfile=myd_c437x_idk_lcd.dtb   # 使用LCD
 ```
 
