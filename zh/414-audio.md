@@ -26,10 +26,9 @@
 test.wav
 # aplay test.wav 
 Playing WAVE 'test.wav' : Signed 16 bit Little Endian, Rate 44100 Hz, Stereo
-
 ```
 
-此时通过耳机即可听到正在播放的音乐文件，如需调节音量可通过`alsamixer`来调节，这个命令执行然后就会出现字符形式的图形界面，使用四个方向键就可以进行调节：
+此时通过耳机即可听到正在播放的音乐文件，如需调节音量可通过alsa-utils工具集里面的`alsamixer`来调节，这个命令执行然后就会出现字符形式的图形界面，使用四个方向键就可以进行调节：
 
 ```
 +------------------------------ AlsaMixer v1.1.2 ------------------------------+
@@ -58,15 +57,9 @@ Playing WAVE 'test.wav' : Signed 16 bit Little Endian, Rate 44100 Hz, Stereo
 +------------------------------------------------------------------------------+
 ```
 
- 通过方向键左右切换项目，`Item: Headphone [dB gain: -4.50, -4.50] `项目为音量调节，通过方向键上下调节所需的音量大小。
+通过方向键左右切换项目，`Item: Headphone [dB gain: -4.50, -4.50]`项目为音量调节，通过方向键上下调节所需的音量大小。
 
-* 测试音频输入，使用用alsa-utils工具集里面的arecord来测试：
-
-
-
-
-
-
+* 测试音频输入，使用alsa-utils工具集里面的arecord来测试：
 
 
 
