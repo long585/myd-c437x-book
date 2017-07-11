@@ -25,7 +25,7 @@
   * [4.12 USB DEVICE](Chapter4-12.md)
   * [4.13 CAMERA](Chapter4-13.md)
   * [4.14 AUDIO](Chapter4-14.md)
-  * [4.15 HDMI](4Chapter4-15.md)
+  * [4.15 HDMI](Chapter4-15.md)
 * [5. Qt应用开发](Chapter5.md)
   * [5.1 安装QtCreator](Chapter5-1.md)
   * [5.2 配置QtCreator](Chapter5-2.md)
