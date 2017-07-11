@@ -40,7 +40,7 @@ MYD AM437X系列每一块开发板出厂附带资料中都包含了对应开发�
 例如MYD-C437X-EVM开发板，可以通过uEnv.txt设置不同的fdtfile来实现。
 
 ```
-#fdtfile=myd_c437x_evm.dtb        # 不使用HDMI
+#fdtfile=myd_c437x_evm.dtb        
 #fdtfile=myd_c437x_evm_hdmi.dtb   # 使用HDMI
 ```
 
