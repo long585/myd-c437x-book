@@ -51,7 +51,30 @@ o> Target packages > Libraries > Graphics > libdrm ----------------------------
 
 * 修改启动要加载的设备树为myd\_c437x\_evm\_hdmi.dtb：
 
-1. SD卡启动：编辑位于SD中的uEnv\_ramdisk.txt，将
+* SD卡启动：编辑位于SD中的uEnv\_ramdisk.txt，将内容改为如下所示：
+
+```
+# This uEnv.txt file can contain additional environment settings that you
+# want to set in U-Boot at boot time.  This can be simple variables such
+# as the serverip or custom variables.  The format of this file is:
+#    variable=value
+# NOTE: This file will be evaluated after the bootcmd is run and the
+#       bootcmd must be set to load this file if it exists (this is the
+#       default on all newer U-Boot images.  This also means that some
+#       variables such as bootdelay cannot be changed by this file since
+#       it is not evaluated until the bootcmd is run.
+#optargs=video=HDMI-A-1:800x600
+
+# Uncomment the following line to enable HDMI display and disable LCD display.
+#fdtfile=myd_c437x_evm.dtb
+fdtfile=myd_c437x_evm_hdmi.dtb
+devtype=mmc
+devnum=0
+bootdir=/
+bootpart=0:1
+uenvcmd=if run loadimage; then run loadfdt; run loadramdisk; echo Booting from mmc${mmcdev} ...; run ramargs; print bootargs; bootz ${loadaddr} ${rdaddr} ${fdtaddr}; fi;
+
+```
 
 
 
