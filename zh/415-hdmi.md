@@ -51,7 +51,7 @@ o> Target packages > Libraries > Graphics > libdrm ----------------------------
 
 * 修改启动要加载的设备树为myd\_c437x\_evm\_hdmi.dtb：
 
-  SD卡启动：编辑位于SD中的uEnv\_ramdisk.txt，将内容改为如下所示：
+  **SD卡启动**：编辑位于SD中的uEnv\_ramdisk.txt，将内容改为如下所示：
 
 ```
 # This uEnv.txt file can contain additional environment settings that you
@@ -75,17 +75,16 @@ bootpart=0:1
 uenvcmd=if run loadimage; then run loadfdt; run loadramdisk; echo Booting from mmc${mmcdev} ...; run ramargs; print bootargs; bootz ${loadaddr} ${rdaddr} ${fdtaddr}; fi
 ```
 
-  
+**EMMC启动和NFS启动**：uboot阶段设置进入控制台，设置环境变量
 
-
-
-
-
-
-
-
-
-
+```
+MYIR># setenv fdtfile myd_c437x_evm_hdmi.dtb
+MYIR># saveenv
+Saving Environment to FAT...
+Card did not respond to voltage select!
+** Bad device mmc 0 **
+MYIR># reset
+```
 
 
 
