@@ -86,5 +86,9 @@ Card did not respond to voltage select!
 MYIR># reset
 ```
 
+* 上述启动方式的设备树文件修改完毕后，上电进入到开发板，将之前编译好的modetest应用程序拷贝到开发板的/usr/bin目录下
+
+* 把HDMI连接线一端插入到开发板的J9 \(HDMI\)接口，另一端接入到显示器的HDMI接口，执行应用程序
+
 
 
