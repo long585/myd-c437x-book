@@ -88,5 +88,7 @@ Period size: 128 frames, buffer size: 256 bytes
 
 此时通过麦克风说话，耳机端也能同步听到声音。
 
+* MYIR AM437X系列其它板型audio测试可以参照本例程进行。
+
 
 
