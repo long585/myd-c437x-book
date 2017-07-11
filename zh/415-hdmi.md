@@ -99,8 +99,9 @@ trying to open device 'nouveau'...failed
 trying to open device 'vmwgfx'...failed
 trying to open device 'omapdrm'...done
 setting mode 1024x768-60Hz@XR24 on connectors 25, crtc 27
-
 ```
+
+显示屏上即可看到画面。
 
 
 
