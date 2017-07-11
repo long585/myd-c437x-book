@@ -13,7 +13,7 @@
 
 * Linux Kernel 4.1.18
 
-* modetest测试程序
+* modetest应用程序
 
 **测试过程：**
 
