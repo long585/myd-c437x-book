@@ -23,6 +23,9 @@
   * [4.10 EEPROM](Chapter4-10.md)
   * [4.11 USB Host](Chapter4-11.md)
   * [4.12 USB DEVICE](Chapter4-12.md)
+  * [4.13 CAMERA](413-camera.md)
+  * [4.14 AUDIO](414-audio.md)
+  * [4.15 HDMI](415-hdmi.md)
 * [5. Qt应用开发](Chapter5.md)
   * [5.1 安装QtCreator](Chapter5-1.md)
   * [5.2 配置QtCreator](Chapter5-2.md)
@@ -30,6 +33,4 @@
 * [6. 系统更新](Chapter6.md)
 * [附录A](appendixa.md)
 * [附录B](appendixb.md)
-
-
 
