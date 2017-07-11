@@ -13,7 +13,9 @@
 
 * Linux Kernel 4.1.18
 
-* camera\_test应用程序
+* alsa-utils工具集，audio\_test应用程序
 
 **测试过程：**
+
+
 
