@@ -18,7 +18,55 @@
 **测试过程：**
 
 * 开发板开机，将双头耳机的耳机头插入开发板J19 \(LINE\_OUT\),将耳机的麦克风头插入到开发板J18 \(LINE\_IN\).
-* 测试音频播放，将准备好的WAV格式的音频文件拷贝到开发板/media/test.wav
+* 测试音频播放，将准备好的WAV格式的音频文件拷贝到开发板`/media/test.wav`目录下，用alsa-utils工具集里面的`aplay`来测试音频播放：
+
+```
+# cd media/
+# ls
+test.wav
+# aplay test.wav 
+Playing WAVE 'test.wav' : Signed 16 bit Little Endian, Rate 44100 Hz, Stereo
+
+```
+
+此时通过耳机即可听到正在播放的音乐文件，如需调节音量可通过`alsamixer`来调节，这个命令执行然后就会出现字符形式的图形界面，使用四个方向键就可以进行调节：
+
+```
++------------------------------ AlsaMixer v1.1.2 ------------------------------+
+| Card: MYD-C437X-EVM                                  F1:  Help               |
+| Chip:                                                F2:  System information |
+| View: F3:[Playback] F4: Capture  F5: All             F6:  Select sound card  |
+| Item: Headphone [dB gain: -4.00, -4.00]              Esc: Exit               |
+|                                                                              |
+|     +--+                       +--+     +--+                                 |
+|     |  |                       |aa|     |  |                                 |
+|     |  |                       |aa|     |  |                                 |
+|     |  |                       |aa|     |  |                                 |
+|     |  |                       |aa|     |  |                                 |
+|     |  |                       |aa|     |  |                                 |
+|     |  |                       |aa|     |  |                                 |
+|     |aa|                       |aa|     |  |                                 |
+|     |aa|                       |aa|     |  |                                 |
+|     |aa|                       |aa|     |  |                                 |
+|     |aa|                       |aa|     |  |                                 |
+|     |aa|                       |aa|     |  |                                 |
+|     +--+     DAC      +--+     +--+     +--+     +--+    MIC_IN    +--+      |
+|                       |OO|                       |MM|              |OO|      |
+|                       +--+                       +--+              +--+      |
+|    50<>50                    100<>100    0                                   |
+|  <Headphon>Headphon Headphon   PCM      Mic    Capture  Capture  Capture     |
++------------------------------------------------------------------------------+
+```
+
+ 通过方向键左右切换项目，`Item: Headphone [dB gain: -4.50, -4.50] `项目为音量调节，通过方向键上下调节所需的音量大小。
+
+* 测试音频输入，使用用alsa-utils工具集里面的arecord来测试：
+
+
+
+
+
+
 
 
 
