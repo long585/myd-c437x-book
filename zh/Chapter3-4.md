@@ -38,7 +38,7 @@ BR2_PACKAGE_TI_SGX_UM=y
 $ ./helloqt5 --platform linuxfb:fb=/dev/fb0
 ```
 
-`MYD-C473X-PRU`开发板支持QT5的系统编译：
+`MYD-C473X-EVM`开发板支持QT5的系统编译：
 
 ```
 $ make clean
