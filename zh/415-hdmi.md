@@ -17,7 +17,35 @@
 
 **测试过程：**
 
-* 编译modetest应用程序
+* 编译modetest应用程序，进入到
+
+```
+ /home/qinlh/builtroot/myir-buildroot/.config - Buildroot 2017.02-git-g92c215a C
+o> Target packages > Libraries > Graphics > libdrm ----------------------------
+  +-------------------------------- libdrm ---------------------------------+
+  |  Arrow keys navigate the menu.  <Enter> selects submenus ---> (or empty |  
+  |  submenus ----).  Highlighted letters are hotkeys.  Pressing <Y>        |  
+  |  selectes a feature, while <N> will exclude a feature.  Press           |  
+  |  <Esc><Esc> to exit, <?> for Help, </> for Search.  Legend: [*] feature |  
+  | +---------------------------------------------------------------------+ |  
+  | |    --- libdrm                                                       | |  
+  | |    [ ]   radeon                                                     | |  
+  | |    [ ]   amdgpu                                                     | |  
+  | |    [ ]   nouveau                                                    | |  
+  | |    -*-   omap (experimental)                                        | |  
+  | |    [ ]   etnaviv (experimental)                                     | |  
+  | |    [ ]   exynos (experimental)                                      | |  
+  | |    [ ]   freedreno                                                  | |  
+  | |    [ ]   tegra (experimental)                                       | |  
+  | |    [ ]   vc4                                                        | |  
+  | |    [*]   Install test programs                                      | |  
+  | +---------------------------------------------------------------------+ |  
+  +-------------------------------------------------------------------------+  
+  |        <Select>    < Exit >    < Help >    < Save >    < Load >         |  
+  +-------------------------------------------------------------------------+  
+                                                                               
+
+```
 
 
 
