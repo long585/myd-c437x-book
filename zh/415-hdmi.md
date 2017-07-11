@@ -49,9 +49,9 @@ o> Target packages > Libraries > Graphics > libdrm ----------------------------
 
 执行make命令等待一段时间，编译好的modetest应用程序位于`<WORKDIR>/Filesystem/myir-buildroot/output/build/libdrm-2.4.74/tests/modetest/modetest`
 
-* 修改启动要加载的设备树为myd\_c437x\_evm\_hdmi.dtb
+* 修改启动要加载的设备树为myd\_c437x\_evm\_hdmi.dtb：
 
-1. SD卡启动：
+1. SD卡启动：编辑位于SD中的uEnv\_ramdisk.txt，将
 
 
 
