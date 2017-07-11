@@ -75,7 +75,7 @@ Playing WAVE 'record.wav' : Signed 16 bit Little Endian, Rate 44100 Hz, Stereo
 
 用户也可通过audio\_test应用程序来测试音频，此应用的功能为同步播放录音的音频
 
-* 将
+* 将目录`<WORKDIR>/Examples/rootfs/usr/bin/`中的可执行程序audio\_test拷贝至开发板/usr/bin/,执行下面命令：
 
 
 
