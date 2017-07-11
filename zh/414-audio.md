@@ -73,5 +73,9 @@ Recording WAVE 'record.wav' : Signed 16 bit Little Endian, Rate 44100 Hz, Stereo
 Playing WAVE 'record.wav' : Signed 16 bit Little Endian, Rate 44100 Hz, Stereo
 ```
 
-用户也可通过
+用户也可通过audio\_test应用程序来测试音频，此应用的功能为同步播放录音的音频
+
+* 将
+
+
 
