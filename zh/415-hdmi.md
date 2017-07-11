@@ -13,7 +13,7 @@
 
 * Linux Kernel 4.1.18
 
-* alsa-utils工具集，audio\_test应用程序
+* modetest测试程序
 
 **测试过程：**
 
