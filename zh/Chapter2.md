@@ -16,7 +16,7 @@
 具体如下图：  
 
 ![](/zh/imagech/C2_1_MYD-C437x_Mark.png)
-图2-1 MYD-C437X接口定义
+图2-1 MYD-C437X-EVM接口定义
 
 
 **建立工作目录:**
