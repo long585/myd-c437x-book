@@ -103,5 +103,7 @@ setting mode 1024x768-60Hz@XR24 on connectors 25, crtc 27
 
 显示屏上即可看到画面。
 
+* MYIR AM437X系列其它板型HDMI测试可以参照本例程进行。
+
 
 
