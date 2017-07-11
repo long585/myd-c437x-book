@@ -77,5 +77,16 @@ Playing WAVE 'record.wav' : Signed 16 bit Little Endian, Rate 44100 Hz, Stereo
 
 * 将目录`<WORKDIR>/Examples/rootfs/usr/bin/`中的可执行程序audio\_test拷贝至开发板/usr/bin/,执行下面命令：
 
+```
+# audio_test 
+rate set to 21999, expected 22000
+Init capture successfully, rate: 21999, period_size: 128
+rate set to 21998, expected 21999
+Period size: 128 frames, buffer size: 256 bytes
+^C38 frames
+```
+
+此时通过麦克风说话，耳机端也能同步听到声音。
+
 
 
