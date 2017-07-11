@@ -51,7 +51,7 @@ o> Target packages > Libraries > Graphics > libdrm ----------------------------
 
 * 修改启动要加载的设备树为myd\_c437x\_evm\_hdmi.dtb：
 
-1. SD卡启动：编辑位于SD中的uEnv\_ramdisk.txt，将内容改为如下所示：
+  SD卡启动：编辑位于SD中的uEnv\_ramdisk.txt，将内容改为如下所示：
 
 ```
 # This uEnv.txt file can contain additional environment settings that you
@@ -74,6 +74,16 @@ bootdir=/
 bootpart=0:1
 uenvcmd=if run loadimage; then run loadfdt; run loadramdisk; echo Booting from mmc${mmcdev} ...; run ramargs; print bootargs; bootz ${loadaddr} ${rdaddr} ${fdtaddr}; fi
 ```
+
+  
+
+
+
+
+
+
+
+
 
 
 
