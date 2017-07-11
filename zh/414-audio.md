@@ -59,7 +59,19 @@ Playing WAVE 'test.wav' : Signed 16 bit Little Endian, Rate 44100 Hz, Stereo
 
 通过方向键左右切换项目，`Item: Headphone [dB gain: -4.50, -4.50]`项目为音量调节，通过方向键上下调节所需的音量大小。
 
-* 测试音频输入，使用alsa-utils工具集里面的arecord来测试：
+* 测试音频输入，使用alsa-utils工具集里面的`arecord`来测试：
 
+```
+# arecord -c 2 -r 44100 -f S16_LE record.wav
+Recording WAVE 'record.wav' : Signed 16 bit Little Endian, Rate 44100 Hz, Stereo
+```
 
+结束录音，通过`aplay`来播放刚才的录音文件：
+
+```
+# aplay record.wav 
+Playing WAVE 'record.wav' : Signed 16 bit Little Endian, Rate 44100 Hz, Stereo
+```
+
+用户也可通过
 
