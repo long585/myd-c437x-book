@@ -17,7 +17,9 @@
 
 **测试过程：**
 
-* 编译modetest应用程序，进入到
+* 编译modetest应用程序，进入到Buildroot所在目录，执行`make menuconfig`进入如所示的配置界面
+
+选中`Install test programs` 保存配置退出。
 
 ```
  /home/qinlh/builtroot/myir-buildroot/.config - Buildroot 2017.02-git-g92c215a C
@@ -42,10 +44,11 @@ o> Target packages > Libraries > Graphics > libdrm ----------------------------
   | +---------------------------------------------------------------------+ |  
   +-------------------------------------------------------------------------+  
   |        <Select>    < Exit >    < Help >    < Save >    < Load >         |  
-  +-------------------------------------------------------------------------+  
-                                                                               
-
+  +-------------------------------------------------------------------------+
+  
 ```
+
+执行make命令等待一段时间，编译好的modetest应用程序位于./output/build/libdrm-2.4.74/tests/modetest/modetest
 
 
 
