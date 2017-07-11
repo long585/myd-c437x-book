@@ -18,7 +18,7 @@ $ export CROSS_COMPILE=arm-linux-gnueabihf-
 $ export PATH=$PATH:<WORKDIR>/ToolChain/gcc-linaro-5.3-2016.02-x86_64_arm-linux-gnueabihf/bin
 ```
 
-编译完Buildroot之后，在_myir-buildroot/output/host/usr/bin_目录下也生成了一个交叉编译工具链，这里可以使用这个工具链替换上面linaro的工具链：
+编译完Buildroot之后，在`<WORKDIR>/Filesystem/myir-buildroot/output/host/usr/bin`目录下也生成了一个交叉编译工具链，这里可以使用这个工具链替换上面linaro的工具链：
 
 ```
 $ export CROSS_COMPILE=arm-linux-myir-gnueabihf-
