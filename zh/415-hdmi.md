@@ -45,10 +45,11 @@ o> Target packages > Libraries > Graphics > libdrm ----------------------------
   +-------------------------------------------------------------------------+  
   |        <Select>    < Exit >    < Help >    < Save >    < Load >         |  
   +-------------------------------------------------------------------------+
-  
 ```
 
-执行make命令等待一段时间，编译好的modetest应用程序位于./output/build/libdrm-2.4.74/tests/modetest/modetest
+执行make命令等待一段时间，编译好的modetest应用程序位于`<WORKDIR>/Filesystem/myir-buildroot/output/build/libdrm-2.4.74/tests/modetest/modetest`
+
+* 修改启动要加载的设备树为
 
 
 
