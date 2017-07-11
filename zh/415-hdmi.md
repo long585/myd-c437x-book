@@ -75,7 +75,7 @@ bootpart=0:1
 uenvcmd=if run loadimage; then run loadfdt; run loadramdisk; echo Booting from mmc${mmcdev} ...; run ramargs; print bootargs; bootz ${loadaddr} ${rdaddr} ${fdtaddr}; fi
 ```
 
-**EMMC启动和NFS启动**：uboot阶段设置进入控制台，设置环境变量
+**EMMC启动和NFS启动**：uboot启动阶段进入控制台，设置环境变量
 
 ```
 MYIR># setenv fdtfile myd_c437x_evm_hdmi.dtb
