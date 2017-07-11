@@ -88,7 +88,19 @@ MYIR># reset
 
 * 上述启动方式的设备树文件修改完毕后，上电进入到开发板，将之前编译好的modetest应用程序拷贝到开发板的/usr/bin目录下
 
-* 把HDMI连接线一端插入到开发板的J9 \(HDMI\)接口，另一端接入到显示器的HDMI接口，执行应用程序
+* 把HDMI连接线一端插入到开发板的J9 \(HDMI\)接口，另一端接入到显示器的HDMI接口，执行应用程序：
+
+```
+# modetest -s 25@27:1024x768
+trying to open device 'i915'...failed
+trying to open device 'amdgpu'...failed
+trying to open device 'radeon'...failed
+trying to open device 'nouveau'...failed
+trying to open device 'vmwgfx'...failed
+trying to open device 'omapdrm'...done
+setting mode 1024x768-60Hz@XR24 on connectors 25, crtc 27
+
+```
 
 
 
