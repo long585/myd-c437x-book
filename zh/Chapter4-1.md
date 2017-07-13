@@ -43,7 +43,7 @@ Set gpio3_7 level low success!
 
 用户也可以通过shell脚本，使用echo和cat命令来实现对/sys/class/gpio下文件的访问。例如:set\_eeprom.sh
 
-```
+```c
 #!/bin/bash
 
 EEPROM_WP_GPIO_PIN=103
@@ -53,30 +53,30 @@ wait_gpio() {
 }
 
 wp_init() {
-        if [ ! -d "/sys/class/gpio/gpio$EEPROM_WP_GPIO_PIN" ]; then
-                echo "$EEPROM_WP_GPIO_PIN" > /sys/class/gpio/export; wait_gpio
-        fi
+    if [ ! -d "/sys/class/gpio/gpio$EEPROM_WP_GPIO_PIN" ]; then
+        echo "$EEPROM_WP_GPIO_PIN" > /sys/class/gpio/export; wait_gpio
+    fi
 
-        echo "out" > /sys/class/gpio/gpio$EEPROM_WP_GPIO_PIN/direction; wait_gpio
+    echo "out" > /sys/class/gpio/gpio$EEPROM_WP_GPIO_PIN/direction; wait_gpio
 }
 
 up() {
-        echo "0" > /sys/class/gpio/gpio$EEPROM_WP_GPIO_PIN/value; wait_gpio
+    echo "0" > /sys/class/gpio/gpio$EEPROM_WP_GPIO_PIN/value; wait_gpio
 }
 
 down() {
-        echo "1" > /sys/class/gpio/gpio$EEPROM_WP_GPIO_PIN/value; wait_gpio
+    echo "1" > /sys/class/gpio/gpio$EEPROM_WP_GPIO_PIN/value; wait_gpio
 }
 
 if [ "$1" = "1" ]; then
-        wp_init
-        up
+    wp_init
+    up
 fi
 
 if [ "$1" = "0" ]; then
-        wp_init
-        down
-        echo "$EEPROM_WP_GPIO_PIN" > /sys/class/gpio/unexport; wait_gpio
+    wp_init
+    down
+    echo "$EEPROM_WP_GPIO_PIN" > /sys/class/gpio/unexport; wait_gpio
 fi
 ```
 

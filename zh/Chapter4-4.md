@@ -18,7 +18,7 @@
 
 * 将目录`<WORKDIR>/Examples/rootfs/usr/bin/`中的可执行程序rtc\_test拷贝至开发板/usr/bin/，执行以下命令将rtc当前时间设置为2016/11/18  17:58:18 并读取当前时间：  
 
-```
+```c
 # chmod 777 /usr/bin/rtc_test
 # rtc_test -h 
 Usage: rtc_test [options]
@@ -44,12 +44,12 @@ Options:
 
 * 用户也可以使用date, hwclock配合，进行RTC的测试  
 
-```
-# date  081518002016.30                            -- 设置系统时间为2016年8月15日18:00:30
+```c
+# date  081518002016.30                    -- 设置系统时间为2016年8月15日18:00:30
 Mon Aug 15 18:00:30 UTC 2016
 # date
 Mon Aug 15 18:00:38 UTC 2016
-# hwclock -w /dev/rtc1                            -- 将系统时间写入到rtc1
+# hwclock -w /dev/rtc1                     -- 将系统时间写入到rtc1
 ```
 
 * 将开发板断电，经过一段时间之后，重新上电开机，再次通过hwclock读出rtc的时间，如下：  

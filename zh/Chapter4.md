@@ -12,7 +12,7 @@ $ cd <WORKDIR>/Examples/
 
 确保环境变量按下面的示例设置完成:
 
-```
+```c
 $ export ARCH=arm
 $ export CROSS_COMPILE=arm-linux-gnueabihf-
 $ export PATH=$PATH:<WORKDIR>/ToolChain/gcc-linaro-5.3-2016.02-x86_64_arm-linux-gnueabihf/bin
@@ -20,14 +20,14 @@ $ export PATH=$PATH:<WORKDIR>/ToolChain/gcc-linaro-5.3-2016.02-x86_64_arm-linux-
 
 编译完Buildroot之后，在`<WORKDIR>/Filesystem/myir-buildroot/output/host/usr/bin`目录下也生成了一个交叉编译工具链，这里可以使用这个工具链替换上面linaro的工具链：
 
-```
+```c
 $ export CROSS_COMPILE=arm-linux-myir-gnueabihf-
 $ export PATH=$PATH:<WORKDIR>/Filesystem/myir-buildroot/output/host/usr/bin
 ```
 
 Camera和Audio例程的Makefile需要指定依赖库的目录和头文件的目录,下面以Camera的例程为例子：
 
-```
+```c
 $ cd <WORKDIR>/Examples/camera
 $ cat Makefile
 CC = $(CROSS_COMPILE)gcc
