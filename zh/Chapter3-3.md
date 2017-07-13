@@ -19,23 +19,6 @@ boot   Config.in.legacy  DEVELOPERS  fs    Makefile.legacy  README   toolchain
 ```
 关于`Buildroot`的目录结构可以参照[https://buildroot.org/downloads/manual/manual.html](https://buildroot.org/downloads/manual/manual.html). 其中和`MYD-C437x-EVM`开发板相关的部分主要位于`<WORKDIR>/Filesystem/myir-buildroot/board/myir/myd_c437x_evm`目录。   
 
-###3.3.2 开始构建  
-
-Buildroot构建的过程类似于Linux Kernel的构建，只需要简单的两个命令就可以完成。MYD-C437X-EVM平台默认的配置文件位于*myir-buildroot/configs/myd_c437x_evm_defconfig*. 其中主要包含一些硬件测试相关的工具，	用户也可以根据不同的应用场景需要编写自己的配置文件。
-```
-$ make myd_c437x_evm_defconfig
-$ make
-```
-编译过程中会生成一个output目录，最终生成的输出的文件位于`<WORKDIR>/Filesystem/myir-buildroot/output/images`目录。
-```
-$ls -al output/images
-boot.vfat               ramdisk.gz      rootfs.cpio.uboot  rootfs.tar.gz  u-boot.img   uEnv_ramdisk.txt
-MLO                     readme.txt      rootfs.ext2        rootfs.ubi     uEnv   uEnv.txt
-myd_c437x_evm.dtb       rootfs.cpio     rootfs.ext4        rootfs.ubifs   uEnv_hdmi.txt  zImage
-myd_c437x_evm_hdmi.dtb  rootfs.cpio.gz  rootfs.tar         sdcard.img     uEnv_mmc.txt
-
-```
-output/images 目录下的输出文件基本上包含了bootloader, kernel, 以及各种格式的文件系统镜像。这些文件在接下来的系统升级章节将会详细介绍。
 
 ###3.3.3 配置说明  
 
@@ -112,7 +95,23 @@ $ ubinize -o rootfs.ubi -m 0x800 -p 0x20000 -s 512 -m 2048 -O 2048 ubinize.cfg
   
 ![C3_3_buildroot_make_menuconfig_target_packages](imagech/C3_3_buildroot_make_menuconfig_target_packages.png)	  
 图3-3-6 工具包配置  
+###3.3.2 开始构建
 
+Buildroot构建的过程类似于Linux Kernel的构建，只需要简单的两个命令就可以完成。MYD-C437X-EVM平台默认的配置文件位于*myir-buildroot/configs/myd_c437x_evm_defconfig*. 其中主要包含一些硬件测试相关的工具，	用户也可以根据不同的应用场景需要编写自己的配置文件。
+```
+$ make myd_c437x_evm_defconfig
+$ make
+```
+编译过程中会生成一个output目录，最终生成的输出的文件位于`<WORKDIR>/Filesystem/myir-buildroot/output/images`目录。
+```
+$ls -al output/images
+boot.vfat ramdisk.gz rootfs.cpio.uboot rootfs.tar.gz u-boot.img uEnv_ramdisk.txt
+MLO readme.txt rootfs.ext2 rootfs.ubi uEnv uEnv.txt
+myd_c437x_evm.dtb rootfs.cpio rootfs.ext4 rootfs.ubifs uEnv_hdmi.txt zImage
+myd_c437x_evm_hdmi.dtb rootfs.cpio.gz rootfs.tar sdcard.img uEnv_mmc.txt
+
+```
+output/images 目录下的输出文件基本上包含了bootloader, kernel, 以及各种格式的文件系统镜像。这些文件在接下来的系统升级章节将会详细介绍。
 ###3.3.4 Arago构建的文件系统
 MYD-C437X-EVM也可以使用基于Arago构建的文件系统镜像，具体的构建方法可以参考TI官网WIKI页面.  
 [http://processors.wiki.ti.com/index.php/Processor_SDK_Building_The_SDK](http://processors.wiki.ti.com/index.php/Processor_SDK_Building_The_SDK).  
