@@ -26,8 +26,7 @@ Usage: rtc_test [options]
 Version 1.0
 Options:
 -d | --device name   rtc device name, default: /dev/rtc0
--w | --write  time     time string with format 
-           MMDDhhmm[CCYY][.ss]. such as: 111817582016.18 
+-w | --write  time     time string with format MMDDhhmm[CCYY][.ss]. such as: 111817582016.18 
 -h | --help          Print this message
 
 # rtc_test -d /dev/rtc1 -w 111817582016.18
