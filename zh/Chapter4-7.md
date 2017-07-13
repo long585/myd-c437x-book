@@ -27,8 +27,9 @@ Version 1.0
 Options:
 -d | --device name   can device name: can0
 -b | --baudrate baudrate   set baudrate, default baudrate:50000
--l | --loop              operate circularly, default not operate circularly!
--w | --write  frame     frame string with format ID#MESSAGE. such as: 123#112233445566
+-l | --loop         operate circularly, default not operate circularly!
+-w | --write  frame     frame string with format ID#MESSAGE.
+                             such as: 123#112233445566
 -h | --help                Print this message
 ```
 
