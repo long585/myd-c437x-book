@@ -45,7 +45,7 @@ Options:
 # chmod 777 /usr/bin/can_test
 # can_test -d can0 -w 123#112233445566
 [ 6862.997962] c_can_platform 481cc000.can can0: setting 
-                     BTR=1c1d BRPE=0000
+BTR=1c1d BRPE=0000
 ====== write  frame: ======
  frame_id = 0x123
  frame_len = 6
@@ -58,8 +58,8 @@ Options:
 ```
 # chmod 777 /usr/bin/can_test
 # can_test -d can0 -l
-[ 6484.014811] c_can_platform 481cc000.can can0: setting BTR=1c1d BRPE=0000
-  can0  0x123  [6]  0x11 0x22 0x33 0x44 0x55 0x66
+[ 6484.014811] c_can_platform 481cc000.can can0: setting BTR=1c1d 
+BRPE=0000 can0  0x123  [6]  0x11 0x22 0x33 0x44 0x55 0x66
 ```
 
 * 如果使用-l参数，则会循环执行读写操作，两块板互换一下角色，结果一样，不再赘述。
