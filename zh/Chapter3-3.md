@@ -83,8 +83,8 @@ $ git commit -m "Initial Version" -a
 
 
 ```
-BR2_TARGET_UBOOT_CUSTOM_REPO_URL="~/myir-u-boot/.git"
-BR2_TARGET_UBOOT_CUSTOM_REPO_VERSION="master"
+BR2_LINUX_KERNEL_CUSTOM_REPO_URL="~/myir-u-boot/.git"
+BR2_LINUX_KERNEL_CUSTOM_REPO_VERSION="master"
 
 
 Kernel的配置和bootloader类似，主要配置内核代码的获取方式，内核的配置文件和输出文件等。
