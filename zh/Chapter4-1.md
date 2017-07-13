@@ -53,11 +53,11 @@ wait_gpio() {
 }
 
 wp_init() {
-    if [ ! -d "/sys/class/gpio/gpio$EEPROM_WP_GPIO_PIN" ]; then
-        echo "$EEPROM_WP_GPIO_PIN" > /sys/class/gpio/export; wait_gpio
-    fi
+  if [ ! -d "/sys/class/gpio/gpio$EEPROM_WP_GPIO_PIN" ]; then
+      echo "$EEPROM_WP_GPIO_PIN" > /sys/class/gpio/export; wait_gpio
+  fi
 
-    echo "out" > /sys/class/gpio/gpio$EEPROM_WP_GPIO_PIN/direction; wait_gpio
+  echo "out" > /sys/class/gpio/gpio$EEPROM_WP_GPIO_PIN/direction; wait_gpio
 }
 
 up() {
