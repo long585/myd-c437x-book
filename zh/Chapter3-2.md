@@ -16,7 +16,7 @@ $ cd myir-kernel
 | --- | --- |
 | MYD-C437x-EVM | myd\_c437x\_evm\_defconfig |
 
-下面以MYD-C437X-PRU开发板为例，说明kernel的编译过程：
+下面以MYD-C437X-EVM开发板为例，说明kernel的编译过程：
 
 ```
 $ make mrproper
