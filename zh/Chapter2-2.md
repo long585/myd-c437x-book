@@ -2,7 +2,7 @@
 
 设置交叉编译工具主要是设置PATH， ARCH和CROSS\_COMPILE三个环境变量，下面介绍具体设置方法。
 
-```c
+```
 $ cd <WORKDIR>/ToolChain
 $ tar Jxvf  gcc-linaro-5.3-2016.02-x86_64_arm-linux-gnueabihf.tar.xz
 $ export PATH=$PATH:<WORKDIR>/ToolChain/gcc-linaro-5.3-2016.02-x86_64_arm-linux-gnueabihf/bin
@@ -18,7 +18,7 @@ vi ~/.profile
 
 在行尾添加或修改：
 
-```c
+```
 export ARCH=arm
 export CROSS_COMPILE=arm-linux-gnueabihf-
 export PATH=$PATH:<WORKDIR>/ToolChain/gcc-linaro-5.3-2016.02-x86_64_arm-linux-gnueabihf/bin
@@ -26,7 +26,7 @@ export PATH=$PATH:<WORKDIR>/ToolChain/gcc-linaro-5.3-2016.02-x86_64_arm-linux-gn
 
 **测试环境变量：**
 
-```c
+```
 $source ~/.profile
 $echo $ARCH
 arm
@@ -36,7 +36,7 @@ arm-linux-gnueabihf-
 
 **测试交叉编译器：**
 
-```c
+```
 $ arm-linux-gnueabihf-gcc -v
 Using built-in specs.
 COLLECT_GCC=arm-linux-gnueabihf-gcc

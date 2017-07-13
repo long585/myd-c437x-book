@@ -42,10 +42,7 @@ $ make dtbs
 };
 ```
 
-> 注意: 当用户修改了U-boot或Kernel的代码之后，Buildroot不会自动更新，必须手动提交到相应的GIT仓库。
 >
-> 注意: 当用户更新了Kernel代码之后，再重新快速编译Buildroot时，需要手动删除"myir-buildroot/dl/linux-master.tar.gz"文件以及  
-> "myir-buildroot/output/build/linux-master" 和"myir-buildroot\output\build\linux-headers-master"这两个目录。U-boot的更新也类似。
 
 
 
