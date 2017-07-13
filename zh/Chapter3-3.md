@@ -114,7 +114,7 @@ $ ubinize -o rootfs.ubi -m 0x800 -p 0x20000 -s 512 -m 2048 -O 2048 ubinize.cfg
 图3-3-6 工具包配置  
 
 ###3.3.4 Arago构建的文件系统
-MYD-C437X-PRU也可以使用基于Arago构建的文件系统镜像，具体的构建方法可以参考TI官网WIKI页面.  
+MYD-C437X-EVM也可以使用基于Arago构建的文件系统镜像，具体的构建方法可以参考TI官网WIKI页面.  
 [http://processors.wiki.ti.com/index.php/Processor_SDK_Building_The_SDK](http://processors.wiki.ti.com/index.php/Processor_SDK_Building_The_SDK).  
 
 
