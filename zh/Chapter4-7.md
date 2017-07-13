@@ -44,7 +44,8 @@ Options:
 ```
 # chmod 777 /usr/bin/can_test
 # can_test -d can0 -w 123#112233445566
-[ 6862.997962] c_can_platform 481cc000.can can0: setting BTR=1c1d BRPE=0000
+[ 6862.997962] c_can_platform 481cc000.can can0: setting 
+                     BTR=1c1d BRPE=0000
 ====== write  frame: ======
  frame_id = 0x123
  frame_len = 6
