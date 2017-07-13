@@ -50,13 +50,14 @@ Bootloader配置主要配置bootloader的代码来源，以及代码的配置，
 
  
 * 配置Kernel：  
+> 注意：用户获取到Kernel代码之后，请自行建立Git仓库，替换配置中的BR2_LINUX_KERNEL_CUSTOM_REPO_URL配置  
+
 
 Kernel的配置和bootloader类似，主要配置内核代码的获取方式，内核的配置文件和输出文件等。
   
 ![C3_3_buildroot_make_menuconfig_kernnel](imagech/C3_3_buildroot_make_menuconfig_kernel.png)  
 图3-3-4 Kernel配置  
    
-> 注意：用户获取到Kernel代码之后，请自行建立Git仓库，替换配置中的BR2_LINUX_KERNEL_CUSTOM_REPO_URL配置  
 
 * 配置文件系统：  
 
