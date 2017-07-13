@@ -69,7 +69,22 @@ Bootloader配置主要配置bootloader的代码来源，以及代码的配置，
 
  
 * 配置Kernel：  
-> 注意：用户获取到Kernel代码之后，请自行建立Git仓库，替换配置中的BR2_LINUX_KERNEL_CUSTOM_REPO_URL配置  
+用户获取到Kernel代码之后，请自行建立Git仓库，替换配置中的BR2_LINUX_KERNEL_CUSTOM_REPO_URL配置  
+建立kernel代码仓库
+```
+$ cd ~/
+$ tar zxvf myir-u-boot.tar.gz
+$ cd myir-u-boot
+$ git init
+$ git add . -f
+$ git commit -m "Initial Version" -a 
+```
+修改位于 `<WORKDIR>/Filesystem/buildroot/configs/myd_c437x_evm_defconfig`配置文件，将下面两项的内容改为如下所示：
+
+
+```
+BR2_TARGET_UBOOT_CUSTOM_REPO_URL="~/myir-u-boot/.git"
+BR2_TARGET_UBOOT_CUSTOM_REPO_VERSION="master"
 
 
 Kernel的配置和bootloader类似，主要配置内核代码的获取方式，内核的配置文件和输出文件等。
