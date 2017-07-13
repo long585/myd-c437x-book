@@ -81,7 +81,7 @@ $ git commit -m "Initial Version" -a
 修改位于 `<WORKDIR>/Filesystem/buildroot/configs/myd_c437x_evm_defconfig`配置文件，将下面两项的内容改为如下所示：
 
 ```
-BR2_LINUX_KERNEL_CUSTOM_REPO_URL="~/myir-u-boot/.git"
+BR2_LINUX_KERNEL_CUSTOM_REPO_URL="~/myir-kernel/.git"
 BR2_LINUX_KERNEL_CUSTOM_REPO_VERSION="master"
 
 
