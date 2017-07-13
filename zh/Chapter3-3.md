@@ -113,7 +113,8 @@ $ ubinize -o rootfs.ubi -m 0x800 -p 0x20000 -s 512 -m 2048 -O 2048 ubinize.cfg
 图3-3-6 工具包配置  
 ###3.3.3 开始构建
 
-Buildroot构建的过程类似于Linux Kernel的构建，只需要简单的两个命令就可以完成。MYD-C437X-EVM平台默认的配置文件位于*myir-buildroot/configs/myd_c437x_evm_defconfig*. 其中主要包含一些硬件测试相关的工具，	用户也可以根据不同的应用场景需要编写自己的配置文件。
+Buildroot构建的过程类似于Linux Kernel的构建，只需要简单的两个命令就可以完成。MYD-C437X-EVM平台默认的配置文件位于*<WORKDIR>/Filesystem/buildroot/configs/myd_c437x_evm_defconfig
+*. 其中主要包含一些硬件测试相关的工具，	用户也可以根据不同的应用场景需要编写自己的配置文件。
 ```
 $ make myd_c437x_evm_defconfig
 $ make
