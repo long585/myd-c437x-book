@@ -52,11 +52,13 @@ $ git init
 $ git add . -f
 $ git commit -m "Initial Version" -a 
 ```
-修改位于 `<WORKDIR>/Filesystem/buildroot/configs/myd_c437x_evm_defconfig`配置文件，将
-BR2_LINUX_KERNEL_CUSTOM_REPO_URL="~/myir-u-boot/.git"
-BR2_LINUX_KERNEL_CUSTOM_REPO_VERSION="master"
+修改位于 `<WORKDIR>/Filesystem/buildroot/configs/myd_c437x_evm_defconfig`配置文件，将下面两项的内容改为如下所示：
 
 
+```
+BR2_TARGET_UBOOT_CUSTOM_REPO_URL="~/myir-u-boot/.git"
+BR2_TARGET_UBOOT_CUSTOM_REPO_VERSION="master"
+```
 
   
 Bootloader配置主要配置bootloader的代码来源，以及代码的配置，编译，安装，如下图所示。这里采用的是git协议从内网的git服务器获取代码。用户也可以根据实际情况配置合适的代码获取方式，具体的配置方式也可以参考Buildroot用户手册。
