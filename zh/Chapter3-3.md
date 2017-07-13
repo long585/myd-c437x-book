@@ -20,7 +20,7 @@ boot   Config.in.legacy  DEVELOPERS  fs    Makefile.legacy  README   toolchain
 关于`Buildroot`的目录结构可以参照[https://buildroot.org/downloads/manual/manual.html](https://buildroot.org/downloads/manual/manual.html). 其中和`MYD-C437x-EVM`开发板相关的部分主要位于`<WORKDIR>/Filesystem/myir-buildroot/board/myir/myd_c437x_evm`目录。   
 
 
-###3.3.3 配置说明  
+###3.3.2 配置说明  
 
 在make之前，可以通过`make menuconfig`进入配置界面。然后可以跟内核配置一样，对当前的配置进行一些修改。下面以`MYD-C437X-EVM`平台为例，加以说明。
 
@@ -95,7 +95,7 @@ $ ubinize -o rootfs.ubi -m 0x800 -p 0x20000 -s 512 -m 2048 -O 2048 ubinize.cfg
   
 ![C3_3_buildroot_make_menuconfig_target_packages](imagech/C3_3_buildroot_make_menuconfig_target_packages.png)	  
 图3-3-6 工具包配置  
-###3.3.2 开始构建
+###3.3.3 开始构建
 
 Buildroot构建的过程类似于Linux Kernel的构建，只需要简单的两个命令就可以完成。MYD-C437X-EVM平台默认的配置文件位于*myir-buildroot/configs/myd_c437x_evm_defconfig*. 其中主要包含一些硬件测试相关的工具，	用户也可以根据不同的应用场景需要编写自己的配置文件。
 ```
