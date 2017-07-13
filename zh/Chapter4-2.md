@@ -41,18 +41,21 @@ xres:800 >>> yres:480 >>> bpp:32>>>
 Usage: fbv [options] image1 image2 image3 ...
 
 Available options:
- --help        | -h : Show this help
- --alpha       | -a : Use the alpha channel (if applicable)
- --dontclear   | -c : Do not clear the screen before and after displaying the image
- --donthide    | -u : Do not hide the cursor before and after displaying the image
- --noinfo      | -i : Supress image information
- --stretch     | -f : Strech (using a simple resizing routine) the image to fit onto
-                                           screen if necessary
- --colorstretch| -k : Strech (using a 'color average' resizing routine) the image to 
-                                             fit onto screen if necessary
- --enlarge     | -e : Enlarge the image to fit the whole screen if necessary
- --ignore-aspect| -r : Ignore the image aspect while resizing
- --delay <d>   | -s <delay> : Slideshow, 'delay' is the slideshow delay in tenths of seconds.
+--help        | -h : Show this help
+--alpha       | -a : Use the alpha channel (if applicable)
+--dontclear   | -c : Do not clear the screen before and after displaying
+                                                   the image
+--donthide    | -u : Do not hide the cursor before and after displaying 
+                                                   the image
+--noinfo      | -i : Supress image information
+--stretch     | -f : Strech (using a simple resizing routine) the image
+                                          to fit ontoscreen if necessary
+--colorstretch| -k : Strech (using a 'color average' resizing routine) 
+                               the image to fit onto screen if necessary
+--enlarge     | -e : Enlarge the image to fit the whole screen if necessary
+--ignore-aspect| -r : Ignore the image aspect while resizing
+--delay <d>   | -s <delay> : Slideshow, 'delay' is the slideshow delay
+                                 in tenths of seconds.
 
 Keys:
  r            : Redraw the image
