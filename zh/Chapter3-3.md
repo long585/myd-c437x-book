@@ -73,8 +73,8 @@ Bootloader配置主要配置bootloader的代码来源，以及代码的配置，
 建立kernel代码仓库
 ```
 $ cd ~/
-$ tar zxvf myir-u-boot.tar.gz
-$ cd myir-u-boot
+$ tar zxvf myir-kernel.tar.gz
+$ cd myir-kernel
 $ git init
 $ git add . -f
 $ git commit -m "Initial Version" -a 
