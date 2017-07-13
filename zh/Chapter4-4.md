@@ -26,7 +26,8 @@ Usage: rtc_test [options]
 Version 1.0
 Options:
 -d | --device name   rtc device name, default: /dev/rtc0
--w | --write  time     time string with format MMDDhhmm[CCYY][.ss]. such as: 111817582016.18 
+-w | --write  time     time string with format 
+           MMDDhhmm[CCYY][.ss]. such as: 111817582016.18 
 -h | --help          Print this message
 
 # rtc_test -d /dev/rtc1 -w 111817582016.18
@@ -45,11 +46,11 @@ Options:
 * 用户也可以使用date, hwclock配合，进行RTC的测试  
 
 ```c
-# date  081518002016.30                    -- 设置系统时间为2016年8月15日18:00:30
+# date  081518002016.30        -- 设置系统时间为2016年8月15日18:00:30
 Mon Aug 15 18:00:30 UTC 2016
 # date
 Mon Aug 15 18:00:38 UTC 2016
-# hwclock -w /dev/rtc1                     -- 将系统时间写入到rtc1
+# hwclock -w /dev/rtc1         -- 将系统时间写入到rtc1
 ```
 
 * 将开发板断电，经过一段时间之后，重新上电开机，再次通过hwclock读出rtc的时间，如下：  
