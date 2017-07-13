@@ -52,7 +52,7 @@ $ git init
 $ git add . -f
 $ git commit -m "Initial Version" -a 
 ```
-修改位于 buildroot/configs/ myd_XXXX_defconfig
+修改位于 <WORKDIR>/Filesystem/buildroot/configs/myd_c437x_evm_defconfig
 
 
   
