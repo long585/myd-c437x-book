@@ -36,7 +36,7 @@ xres:800 >>> yres:480 >>> bpp:32>>>
 
 * 将一个32位颜色深度，分辨率800X480的BMP图像拷贝到开发板/media/1.bmp, 用fbv测试图片显示：  
 
-```
+```c
 # fbv
 Usage: fbv [options] image1 image2 image3 ...
 
