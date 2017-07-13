@@ -41,13 +41,7 @@ Buildroot可以使用外部交叉编译工具链，也可以自行编译产生�
 
 * 配置bootloader：   
  
-> 注意：用户获取到U-boot代码之后，请自行建立Git仓库，替换配置中的BR2_TARGET_UBOOT_CUSTOM_REPO_URL配置操作如下：`$ cd ~/
-$ tar zxvf myir-.tar.gz
-$ cd myir-kernel
-$ git init
-$ git add . -f
-$ git commit -m "Initial Version" -a
-`
+> 注意：用户获取到U-boot代码之后，请自行建立Git仓库，替换配置中的BR2_TARGET_UBOOT_CUSTOM_REPO_URL配置操作如下：
   
 
 
